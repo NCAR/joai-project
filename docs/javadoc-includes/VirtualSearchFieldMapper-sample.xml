@@ -1,0 +1,47 @@
+<!-- 
+This file contains sample XML for the 
+org.dlese.dpc.index.VirtualSearchFieldMapper class, 
+which parses this XML to map Lucene Queries.
+
+The parser looks for <virtualSearchField> elements at any XPath
+within the XML
+-->
+<root>
+	<anyXmlPath>
+		<!-- A <virtualSearchField> element at any XPath configures the search mapping -->
+		<virtualSearchField field="setSpec">
+			<virtualSearchTermDefinition term="testSpec">
+				<Query>
+					<booleanQuery type="OR">
+						<textQuery type="matchAllTerms">wave motion</textQuery>
+						<textQuery type="matchAnyTerm" field="title" boost="2.2">wave motion</textQuery>
+						<textQuery type="matchAnyTerm" field="title" excludeFromResults="true">sea</textQuery>
+						<textQuery type="matchPhrase" field="description">ocean waves</textQuery>
+						<textQuery type="matchKeyword" field="id">123:Module:xyz</textQuery>
+						<booleanQuery type="AND">
+							<luceneQuery>ocean OR sea</luceneQuery>
+							<textQuery type="matchPhrase" field="stems">ocean current</textQuery>
+						</booleanQuery>	
+					</booleanQuery>				
+				</Query>
+			</virtualSearchTermDefinition>
+			<virtualSearchTermDefinition term="testSpec2">
+				<Query>
+					<luceneQuery>colorado AND &quot;rocky mountains&quot;</luceneQuery>
+				</Query>
+			</virtualSearchTermDefinition>			
+		</virtualSearchField>
+	</anyXmlPath>	
+	<pathTwo>
+		<morePath>
+			<!-- A <virtualSearchField> element at any XPath configures the search mapping -->
+			<virtualSearchField field="setSpec">
+				<virtualSearchTermDefinition term="testSpec3">
+					<Query>
+						<luceneQuery>colorado OR titleStems:colorado</luceneQuery>
+					</Query>
+				</virtualSearchTermDefinition>
+			</virtualSearchField>
+		</morePath>
+	</pathTwo>	
+</root>

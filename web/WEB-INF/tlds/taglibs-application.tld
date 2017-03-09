@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+
+
+
+<!DOCTYPE taglib PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.1//EN" "http://java.sun.com/j2ee/dtds/web-jsptaglibrary_1_1.dtd">
+<taglib>
+  <tlibversion>1.0.1</tlibversion>
+  <jspversion>1.1</jspversion>
+  <shortname>application</shortname>
+  <uri>http://jakarta.apache.org/taglibs/application-1.0</uri>
+  <info>The APPLICATION custom tag library contains tags which can be used to
+      access all the information about the ApplicationContext for a JSP application.Tags are provided to access information in "application" scoped attributes.</info>
+  <tag>
+    <name>attribute</name>
+    <tagclass>org.apache.taglibs.application.AttributeTag</tagclass>
+    <bodycontent>empty</bodycontent>
+    <attribute>
+      <name>name</name>
+      <required>yes</required>
+      <rtexprvalue>no</rtexprvalue>
+    </attribute>
+  </tag>
+  <tag>
+    <name>attributes</name>
+    <tagclass>org.apache.taglibs.application.AttributesTag</tagclass>
+    <teiclass>org.apache.taglibs.application.AttributesTEI</teiclass>
+    <bodycontent>JSP</bodycontent>
+    <attribute>
+      <name>id</name>
+      <required>yes</required>
+      <rtexprvalue>no</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>name</name>
+      <required>no</required>
+      <rtexprvalue>no</rtexprvalue>
+    </attribute>
+  </tag>
+  <tag>
+    <name>equalsAttribute</name>
+    <tagclass>org.apache.taglibs.application.EqualsAttributeTag</tagclass>
+    <bodycontent>JSP</bodycontent>
+    <attribute>
+      <name>name</name>
+      <required>yes</required>
+      <rtexprvalue>no</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>value</name>
+      <required>no</required>
+      <rtexprvalue>no</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>match</name>
+      <required>yes</required>
+      <rtexprvalue>no</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>ignoreCase</name>
+      <required>no</required>
+      <rtexprvalue>no</rtexprvalue>
+    </attribute>
+  </tag>
+  <tag>
+    <name>existsAttribute</name>
+    <tagclass>org.apache.taglibs.application.ExistsAttributeTag</tagclass>
+    <bodycontent>JSP</bodycontent>
+    <attribute>
+      <name>name</name>
+      <required>yes</required>
+      <rtexprvalue>no</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>value</name>
+      <required>no</required>
+      <rtexprvalue>no</rtexprvalue>
+    </attribute>
+  </tag>
+  <tag>
+    <name>removeAttribute</name>
+    <tagclass>org.apache.taglibs.application.RemoveAttributeTag</tagclass>
+    <bodycontent>empty</bodycontent>
+    <attribute>
+      <name>name</name>
+      <required>yes</required>
+      <rtexprvalue>no</rtexprvalue>
+    </attribute>
+  </tag>
+  <tag>
+    <name>setAttribute</name>
+    <tagclass>org.apache.taglibs.application.SetAttributeTag</tagclass>
+    <bodycontent>JSP</bodycontent>
+    <attribute>
+      <name>name</name>
+      <required>yes</required>
+      <rtexprvalue>no</rtexprvalue>
+    </attribute>
+  </tag>
+  <tag>
+    <name>initParameter</name>
+    <tagclass>org.apache.taglibs.application.InitParameterTag</tagclass>
+    <bodycontent>empty</bodycontent>
+    <attribute>
+      <name>name</name>
+      <required>yes</required>
+      <rtexprvalue>no</rtexprvalue>
+    </attribute>
+  </tag>
+  <tag>
+    <name>initParameters</name>
+    <tagclass>org.apache.taglibs.application.InitParametersTag</tagclass>
+    <teiclass>org.apache.taglibs.application.InitParametersTEI</teiclass>
+    <bodycontent>JSP</bodycontent>
+    <attribute>
+      <name>id</name>
+      <required>yes</required>
+      <rtexprvalue>no</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>name</name>
+      <required>no</required>
+      <rtexprvalue>no</rtexprvalue>
+    </attribute>
+  </tag>
+  <tag>
+    <name>equalsInitParameter</name>
+    <tagclass>org.apache.taglibs.application.EqualsInitParameterTag</tagclass>
+    <bodycontent>JSP</bodycontent>
+    <attribute>
+      <name>name</name>
+      <required>yes</required>
+      <rtexprvalue>no</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>value</name>
+      <required>no</required>
+      <rtexprvalue>no</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>match</name>
+      <required>yes</required>
+      <rtexprvalue>no</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>ignoreCase</name>
+      <required>no</required>
+      <rtexprvalue>no</rtexprvalue>
+    </attribute>
+  </tag>
+  <tag>
+    <name>existsInitParameter</name>
+    <tagclass>org.apache.taglibs.application.ExistsInitParameterTag</tagclass>
+    <bodycontent>JSP</bodycontent>
+    <attribute>
+      <name>name</name>
+      <required>yes</required>
+      <rtexprvalue>no</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>value</name>
+      <required>no</required>
+      <rtexprvalue>no</rtexprvalue>
+    </attribute>
+  </tag>
+</taglib>
+
+
+
+
+
+
+
+
+
+
+       
+
+

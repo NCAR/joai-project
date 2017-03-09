@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>  
+
+<!DOCTYPE web-app
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+    "http://java.sun.com/dtd/web-app_2_3.dtd">
+ 
+<!-- web.xml setup for the jOAI application -->
+<web-app>			   
+	<display-name>jOAI (v@VERSION@)</display-name> 
+
+	<context-param>        
+		<param-name>hideAdminMenus</param-name>
+		<param-value>false</param-value>
+		<description>
+			Set to 'true' to hide the administrative menus
+			in the user interface.
+		</description>
+	</context-param>
+	<context-param>        
+		<param-name>pageBottomImport</param-name>
+		<param-value></param-value>
+		<description>
+			A page to import and insert at the bottom of each HTML page in the interface.
+			Used for inserting tracking code such as Google Analytics or other 
+			snippets at the bottom of each page.
+			
+			Value should be an absolute URL, for example 'http://myhost.com/bottom_import.html'.
+			Leave blank to disable.
+		</description>
+	</context-param>	
+	<context-param>        
+		<param-name>dataProviderAccessLogLevel</param-name>
+		<param-value>FinalResumption</param-value>
+		<description>
+			Defines how to log client (harvester) requests to the data provider.
+			Possible values are (no quotes):
+			  'Full' - Logs all client interactions with the data provider
+			  'FinalResumption' - Logs only client requests for the final 
+			       segment of a ListRecords or ListIdentifiers request,
+			       indicating a complete harvest
+			  'NoLog' - No log is written for client interactions with the 
+			       data provider (default if not set)			  
+		</description>
+	</context-param>	
+	<context-param>        
+		<param-name>updateFrequency</param-name>
+		<param-value>480</param-value>
+		<description>
+			Time, in minutes, between checking for modified metadta
+			files and making them available in the data provider index.
+			Use 0 to disable automatic updates.
+		</description>
+	</context-param>
+	<context-param>        
+		<param-name>maxNumFilesToIndex</param-name>
+		<param-value>500</param-value>
+		<description>
+			The maximum number of files to index per block. 
+			For Mac OSX, this may need to be set as low as 25 to
+			prevent 'too many open files' errors. For Linux
+			and Windows, this can be set to 500.
+		</description>
+	</context-param>		
+	<context-param>  
+		<param-name>repositoryData</param-name>  
+		<param-value>WEB-INF/repository_settings_and_data</param-value>
+		<description>
+			Location of the persistent, UI-editable application settings and indexes 
+			for the data provider.
+		</description>	  
+    </context-param>
+	<context-param> 
+      <param-name>repositoryConfigDir</param-name>  
+      <param-value>WEB-INF/conf</param-value>  
+		<description>
+			The directory where the RepositoryManager config files reside, 
+			such as the config for default search fields, field boosting
+			level, synonyms and other application configuration properties
+		</description>
+	</context-param>	
+	<context-param>  
+		<param-name>harvesterData</param-name>  
+		<param-value>WEB-INF/harvester_settings_and_data</param-value>
+		<description>
+			Location of the persistent application settings and indexes for the harvester.
+		</description>		  
+    </context-param>	
+	<context-param>  
+		<param-name>zippedHarvestsDirectory</param-name>  
+		<param-value>admin/zipped_harvests</param-value>
+		<description>
+			Location where zippped harvests will be saved to, relative to the context root.
+			An absolute path may also be specified, however zip files will not be 
+			available for download via the web-based UI.
+		</description>		  
+    </context-param>
+	<context-param>        
+		<param-name>harvestTimeOutMilliseconds</param-name>
+		<param-value>300000</param-value>
+		<description>
+			Number of milliseconds the harvester waits for a response from a 
+			given data provider before timing out.
+		</description>
+	</context-param>	
+
+	<context-param>  
+		<param-name>serverUrl</param-name>  
+		<param-value>[determine-from-client]</param-value>
+		<description>
+			This parameter defines the scheme, hostname and port for the server, which is displayed 
+			in the base URL for the data provider and elsewhere, for example http://www.example.org 
+			or http://www.example.org:8080. If the value '[determine-from-client]' is supplied (default), 
+			then the scheme, hostname and port number will be determined by examining the URL that was 
+			requested by the client. Note that when using mod_proxy with Apache, Tomcat must be 
+			configured properly in order for this mechanism to work. Refer to the Tomcat proxy how 
+			to documentation at http://tomcat.apache.org/tomcat-5.5-doc/proxy-howto.html 
+			for information about configuring Tomcat for use with mod_proxy.
+		</description>		  
+    </context-param>
+	
+	<!-- 	Set up the OAI data provider baseURL. Note: To change the baseURL,
+	 		this value must also be changed in the <filter-mapping> 
+			and <servlet-mapping> below in web.xml, and in the <action> mapping in the struts-config.xml 
+			file for the OAI data provider path. -->
+	<context-param>  
+		<param-name>dataProviderBaseUrlPathEnding</param-name>  
+		<param-value>provider</param-value>
+		<description>
+			The last portion of the OAI data provider's Base URL, for example 
+			'provider' or 'oai2-0'.
+		</description>		  
+    </context-param>
+	
+	<context-param>        
+		<param-name>debug</param-name>
+		<param-value>false</param-value>
+		<description>
+			Indicates whether or not debugging messages will
+			be output to standard out. Must be [true | false].
+		</description>
+	</context-param>	
+	
+	<!-- ***************** XML format converters ****************** -->
+	
+	<!-- To configure a format conveter that uses an XSL stylesheet, the param-name 
+	must begin with the string 'xslconverter' and must be unique. The param-value 
+	must be of the form 'xslfile.xsl|[from format]|[to format]'. 
+	The XSL file must be placed in the directory WEB-INF/xsl_files/. -->	
+	<context-param>  
+      <param-name>xslconverter - adn to briefmeta converter</param-name>  
+      <param-value>adn-v0.6.50-to-briefmeta-v0.1.01.xsl|adn|briefmeta</param-value>  
+    </context-param>	
+	<context-param>  
+      <param-name>xslconverter - dlese_ims to ADN converter</param-name>  
+      <param-value>dlese-ims-to-adn-v0.6.50-all.xsl|dlese_ims|adn</param-value>  
+    </context-param>	
+	<context-param>  
+      <param-name>xslconverter - news_opps to oai_dc converter</param-name>  
+	  <param-value>news_opps-v1.0.00-to-oai_dc.xsl|news_opps|oai_dc</param-value>  
+    </context-param>
+	<context-param>  
+      <param-name>xslconverter - dlese_collect to oai_dc converter</param-name>  
+	  <param-value>dlese_collect-v1.0.00-to-oai_dc.xsl|dlese_collect|oai_dc</param-value>  
+    </context-param>	
+	<context-param>  
+      <param-name>xslconverter - dlese_anno (v0.1 or v1.0) to oai_dc converter</param-name>  
+	  <param-value>dlese_anno-v1.0.00-and-v0.1.01-to-oai_dc.xsl|dlese_anno|oai_dc</param-value>  
+    </context-param>
+	<context-param>  
+      <param-name>xslconverter - adn to oai_dc converter</param-name>  
+      <param-value>adn-v0.6.50-to-oai_dc.xsl|adn|oai_dc</param-value>  
+    </context-param>
+	<context-param>  
+      <param-name>xslconverter - adn to nsdl_dc converter</param-name>  
+      <param-value>adn-v0.6.50-to-nsdl_dc-v1.02-asn-identifiers.xsl|adn|nsdl_dc</param-value>  
+    </context-param>
+	<context-param>  
+      <param-name>xslconverter - nsdl_dc to oai_dc converter - Note the available nsdl_dc versions below</param-name>  
+      <param-value>nsdl_dc_v102_to_oai_dc.xsl|nsdl_dc|oai_dc</param-value>
+	  <!-- <param-value>nsdl_dc_v100_to_oai_dc.xsl|nsdl_dc|oai_dc</param-value> -->
+    </context-param>
+	<context-param>  
+      <param-name>xslconverter - dlese_anno to nsdl_dc converter</param-name>  
+      <param-value>dlese_anno-1.0.00-to-nsdl_dc-1.02.xsl|dlese_anno|nsdl_dc</param-value>  
+    </context-param>	
+	<context-param>  
+      <param-name>xslconverter - dlese_collect to nsdl_dc converter</param-name>  
+      <param-value>dlese_collect-v1.0.00-to-nsdl_dc-1.02.xsl|dlese_collect|nsdl_dc</param-value>  
+    </context-param>	
+	<context-param>  
+      <param-name>xslconverter - news_opps to nsdl_dc converter</param-name>  
+      <param-value>news_opps-v1.0.00-to-nsdl_dc-1.02.xsl|news_opps|nsdl_dc</param-value>  
+    </context-param>
+	<context-param>  
+      <param-name>xslconverter - dif to oai_dc</param-name>  
+      <param-value>dif2dc.xsl|dif|oai_dc</param-value>  
+	</context-param>
+	<context-param>  
+      <param-name>xslconverter - dif to fgdc</param-name>  
+      <param-value>difxml_to_fgdcxml_9.7.xsl|dif|fgdc</param-value>  
+	</context-param>
+	<context-param>  
+      <param-name>xslconverter - ncs_collect to nsdl_dc</param-name>  
+      <param-value>ncs-collect-v1.02-to-nsdl-dc-v1.02.020.xsl|ncs_collect|nsdl_dc</param-value>  
+	</context-param>
+	<context-param>  
+      <param-name>xslconverter - ncs_collect to dlese_collect</param-name>  
+      <param-value>ncs-collect-v1.02-to-dlese_collection-v1.0.00.xsl|ncs_collect|dlese_collect</param-value>  
+    </context-param>
+	<context-param>  
+      <param-name>xslconverter - Converts from smile_item to nsdl_dc</param-name>  
+      <param-value>smile-v0.1.4-to-nsdl_dc-v1.02.020.xsl|smile_item|nsdl_dc</param-value>  
+	</context-param>    
+	<context-param>  
+      <param-name>xslconverter - lar to nsdl_dc converter</param-name>  
+      <param-value>lar-v1.00-to-nsdl_dc-v1.02.020.xsl|lar|nsdl_dc</param-value>  
+    </context-param>
+	<context-param>  
+      <param-name>xslconverter - lar to oai_dc converter</param-name>  
+      <param-value>lar2oai_dc.xsl|lar|oai_dc</param-value>  
+    </context-param>	
+	
+	<!-- To configure a format converter that uses a Java class, the param-name must begin with
+	the string 'javaconverter' and must be unique. The param-value 
+	must be of the form '[fully qualified Java class]|[from format]\[to format]'. 
+	The Java class must implement XMLFormatConverter (in package org.dlese.dpc.xml)
+	and be placed in the class path for this servlet -->
+
+	<!-- The following two crosswalk handlers are alternatives to the above xsl converters for 
+	adn to nsdl_dc and oai_dc. Note that the adn to nsdl_dc java converter hangs with the
+	asn identifier version of the crosswalk -->	
+	<!-- <context-param>  
+      <param-name>javaconverter - Converts from adn to the NSDL DC format</param-name>    
+      <param-value>org.dlese.dpc.xml.ADNToNSDLDCFormatConverter|adn|nsdl_dc</param-value>  
+    </context-param>
+	<context-param>  
+      <param-name>javaconverter - Converts from adn to the OAI DC format</param-name>    
+      <param-value>org.dlese.dpc.xml.ADNToOAIDCFormatConverter|adn|oai_dc</param-value>  
+    </context-param> -->
+
+	
+	<!-- ***************** Params used by the Java two XML converters above ****************** -->
+
+	<context-param>  
+      <param-name>adn-to-oai-dc-xsl</param-name>  
+      <param-value>adn-v0.6.50-to-oai_dc.xsl</param-value>  
+	</context-param>	
+	<context-param>  
+      <param-name>adn-to-nsdl-dc-xsl</param-name>  
+	  <param-value>adn-v0.6.50-to-nsdl_dc-v1.02-asn-identifiers.xsl</param-value>
+      <!-- <param-value>adn-v0.6.50-to-nsdl_dc-v1.02.xsl</param-value> -->	  
+	</context-param>	
+	<context-param>  
+      <param-name>namespace-out-xsl</param-name>  
+      <param-value>namespace-out.xsl</param-value>  
+	</context-param>	
+	
+
+	<!-- Send all pages through the XMLValidationFilter, which performs XML validation iff
+		the there is a parameter rt=validate. This filter also performs gzip compression
+		of all responses regardless of whether they are validated. -->  
+	<filter>
+		<filter-name>XMLValidationFilter</filter-name>
+		<filter-class>org.dlese.dpc.webapps.servlets.filters.XMLValidationFilter</filter-class>
+	</filter>
+
+	<!-- Configure all pages to filter. Note that the filters do not handle 404
+	errors, so pages that may return 404 should be excluded. --> 
+	<filter-mapping>
+		<filter-name>XMLValidationFilter</filter-name>
+		<url-pattern>/provider</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>XMLValidationFilter</filter-name>
+		<url-pattern>/admin/query.do</url-pattern>
+	</filter-mapping>
+  
+  <!-- 	=========== The OAIProviderServlet servlet initializes and manages the repository. =========== -->
+  <servlet>  
+    <servlet-name>OAIProviderServlet</servlet-name>  
+    <servlet-class>org.dlese.dpc.oai.provider.OAIProviderServlet</servlet-class>  
+
+	<!-- ***************** Default XMLFormat schema and namespace definitions ****************** 
+		The <param-name> must start with the String 'xmlformatinfo' and must be unique.
+		The <param-value> is of the form: [metadataPrefix]|[schema]|[namespace]
+		These values are used by default but may be changed by the user in the web-based UI
+		for the OAI app.
+	-->
+	<init-param>  
+	  <param-name>xmlformatinfo - oai_dc schema and namespace</param-name>  
+	  <param-value>oai_dc|http://www.openarchives.org/OAI/2.0/oai_dc.xsd|http://www.openarchives.org/OAI/2.0/oai_dc/</param-value>  
+	</init-param>
+	<init-param>  
+	  <param-name>xmlformatinfo - nsdl_dc schema and namespace</param-name>  
+	  <param-value>nsdl_dc|http://ns.nsdl.org/schemas/nsdl_dc/nsdl_dc_v1.02.xsd|http://ns.nsdl.org/nsdl_dc_v1.02/</param-value>  
+	</init-param>
+	<init-param>  
+	  <param-name>xmlformatinfo - adn schema and namespace</param-name>  
+	  <param-value>adn|http://www.dlese.org/Metadata/adn-item/0.6.50/record.xsd|http://adn.dlese.org</param-value>  
+	</init-param>
+	<init-param>  
+	  <param-name>xmlformatinfo - news_opps schema and namespace</param-name>  
+	  <param-value>news_opps|http://www.dlese.org/Metadata/news-opps/1.0.00/news-opps.xsd|http://newsopps.dlese.org</param-value>  
+	</init-param>
+	<init-param>  
+	  <param-name>xmlformatinfo - dlese_anno schema and namespace</param-name>  
+	  <param-value>dlese_anno|http://www.dlese.org/Metadata/annotation/1.0.00/annotation.xsd|http://www.dlese.org/Metadata/annotation</param-value>  
+	</init-param>	
+	<init-param>  
+	  <param-name>xmlformatinfo - dlese_collect schema and namespace</param-name>  
+	  <param-value>dlese_collect|http://www.dlese.org/Metadata/collection/1.0.00/collection.xsd|http://collection.dlese.org</param-value>  
+	</init-param>
+	<init-param>  
+	  <param-name>xmlformatinfo - briefmeta schema and namespace</param-name>  
+	  <param-value>briefmeta|http://www.dlese.org/Metadata/briefmeta/0.1.01/brief-record.xsd|http://www.dlese.org/Metadata/briefmeta</param-value>  
+	</init-param>				
+	<init-param>  
+	  <param-name>xmlformatinfo - msp2 schema and namespace</param-name>  
+	  <param-value>msp2|http://ns.nsdl.org/ncs/msp2/1.00/schemas/record.xsd|http://ns.nsdl.org/ncs/msp2</param-value>  
+	</init-param>
+	<init-param>  
+	  <param-name>xmlformatinfo - comm_anno schema and namespace</param-name>  
+	  <param-value>comm_anno|http://ns.nsdl.org/ncs/comm_anno/1.00/schemas/comm_anno.xsd|http://ns.nsdl.org/ncs/comm_anno</param-value>  
+	</init-param>
+	<init-param>  
+	  <param-name>xmlformatinfo - comm_para schema and namespace</param-name>  
+	  <param-value>comm_para|http://ns.nsdl.org/ncs/comm_para/1.00/schemas/comm_para.xsd|http://ns.nsdl.org/ncs/comm_para</param-value>  
+	</init-param>		
+	<init-param>  
+	  <param-name>xmlformatinfo - ncs_collect schema and namespace</param-name>  
+	  <param-value>ncs_collect|http://ns.nsdl.org/ncs/ncs_collect/1.02/schemas/ncs-collect.xsd|http://ns.nsdl.org/ncs</param-value>  
+	</init-param>
+	<init-param>  
+	  <param-name>xmlformatinfo - eng_path schema and namespace</param-name>  
+	  <param-value>eng_path|http://ns.nsdl.org/ncs/eng_path/1.00/schemas/record.xsd|http://ns.nsdl.org/ncs/eng_path</param-value>  
+	</init-param>
+	<init-param>  
+	  <param-name>xmlformatinfo - math_path schema and namespace</param-name>  
+	  <param-value>math_path|http://ns.nsdl.org/ncs/math_path/1.00/schemas/record.xsd|http://ns.nsdl.org/ncs/math_path</param-value>  
+	</init-param>
+	<init-param>  
+	  <param-name>xmlformatinfo - dif schema and namespace</param-name>  
+	  <param-value>dif|http://gcmd.gsfc.nasa.gov/Aboutus/xml/dif/dif_v9.4.xsd|http://gcmd.gsfc.nasa.gov/Aboutus/xml/dif/</param-value>  
+	</init-param>		
+	<init-param>  
+	  <param-name>xmlformatinfo - assessments schema and namespace</param-name>  
+	  <param-value>assessments|http://www.dlsciences.org/frameworks/assessments/1.00/schemas/assessments.xsd|http://www.dlsciences.org/frameworks/assessments</param-value>  
+	</init-param>
+	<init-param>  
+	  <param-name>xmlformatinfo - ccs_org_config schema and namespace</param-name>  
+	  <param-value>ccs_org_config|http://www.dlsciences.org/frameworks/ccs_org_config/1.00/schemas/ccs_org_config.xsd|http://www.dlsciences.org/frameworks/ccs_org_config</param-value>  
+	</init-param>
+	<init-param>  
+	  <param-name>xmlformatinfo - concepts schema and namespace</param-name>  
+	  <param-value>concepts|http://www.dlsciences.org/frameworks/concepts/1.0/schemas/concepts.xsd|http://www.dlsciences.org/frameworks/concepts</param-value>  
+	</init-param>	
+	<init-param>  
+	  <param-name>xmlformatinfo - teach schema and namespace</param-name>  
+	  <param-value>teach|http://www.dlsciences.org/frameworks/teach/1.00/schemas/teach.xsd|http://www.dlsciences.org/frameworks/teach</param-value>  
+	</init-param>	
+	<init-param>  
+	  <param-name>xmlformatinfo - comm_core schema and namespace</param-name>  
+	  <param-value>comm_core|http://ns.nsdl.org/ncs/comm_core/1.00/schemas/record.xsd|http://ns.nsdl.org/ncs/msp2</param-value>  
+	</init-param>
+	<init-param>  
+	  <param-name>xmlformatinfo - lar schema and namespace</param-name>  
+	  <param-value>lar|http://ns.nsdl.org/ncs/lar/1.00/schemas/lar.xsd|http://ns.nsdl.org/ncs/lar</param-value>  
+	</init-param>
+
+	<!-- ***************** Configure indexing handler classes for specific XML formats (XmlFileIndexingWriter instances) ****************** 
+		The <param-name> must start with the String 'fileindexingclass' and must be unique.
+		The <param-value> is of the form: [xmlFormat]|[XmlFileIndexingWriter instance]
+		The given XmlFileIndexingWriter class must reside in the application class path.
+		
+		Example config below:
+	-->    
+	<!-- <init-param>  
+      <param-name>fileindexingclass - Indeing class for my_format records</param-name>  
+      <param-value>my_format|org.example.MyXMLFileIndexingWriter</param-value>  
+    </init-param> -->
+	
+    <load-on-startup>3</load-on-startup>  
+  </servlet>  
+
+
+  <!-- ===========	The OAIHarvesterServlet servlet initializes and manages the repository. =========== -->
+  <servlet>  
+    <servlet-name>OAIHarvesterServlet</servlet-name>  
+    <servlet-class>org.dlese.dpc.oai.harvester.OAIHarvesterServlet</servlet-class>  
+	
+    <load-on-startup>4</load-on-startup>  
+  </servlet>  
+
+	
+  <!-- Standard Action Servlet Configuration (with debugging) -->  
+  <servlet>  
+    <servlet-name>action</servlet-name>  
+    <servlet-class>org.apache.struts.action.ActionServlet</servlet-class>  
+	<init-param>  
+      <param-name>application</param-name>  
+      <param-value>ApplicationResources</param-value>  
+    </init-param> 	
+    <init-param>  
+      <param-name>config</param-name>  
+      <param-value>/WEB-INF/struts-config.xml</param-value>  
+    </init-param>  
+    <init-param>  
+      <param-name>debug</param-name>  
+      <param-value>0</param-value>  
+    </init-param>  
+    <init-param>  
+      <param-name>detail</param-name>  
+      <param-value>2</param-value>  
+    </init-param>   
+    <init-param>  
+      <param-name>validate</param-name>  
+      <param-value>true</param-value>  
+    </init-param>  
+    <load-on-startup>2</load-on-startup>  
+  </servlet>  
+  
+
+  
+  <!-- Standard Action Servlet Mapping -->  
+  <servlet-mapping>  
+    <servlet-name>action</servlet-name>  
+    <url-pattern>/provider</url-pattern>  
+  </servlet-mapping>  
+  
+  <!-- Standard Action Servlet Mapping -->    
+  <servlet-mapping>  
+    <servlet-name>action</servlet-name>  
+    <url-pattern>*.do</url-pattern>  
+  </servlet-mapping>  
+  
+  
+  <servlet-mapping>  
+    <servlet-name>OAIProviderServlet</servlet-name>  
+    <url-pattern>/OAIProviderServlet</url-pattern>  
+  </servlet-mapping>  
+
+  <servlet-mapping>  
+    <servlet-name>OAIHarvesterServlet</servlet-name>  
+    <url-pattern>/OAIHarvesterServlet</url-pattern>  
+  </servlet-mapping>   
+  
+
+  <!-- The Usual Welcome File List -->  
+  <welcome-file-list>  
+    <welcome-file>index.jsp</welcome-file> 
+    <welcome-file>index.html</welcome-file>  	
+  </welcome-file-list>  
+  
+	<!-- Define pages to display errors -->
+	<error-page>
+		<error-code>404</error-code>
+		<location>/WEB-INF/error_pages/error_page_404.jsp</location>
+	</error-page>
+	<error-page>
+		<!-- Note that custom 401 does not work in TC 5.5.12 (known bug) -->
+		<error-code>401</error-code>
+		<location>/WEB-INF/error_pages/error_page_401.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>403</error-code>
+		<location>/WEB-INF/error_pages/error_page_403.jsp</location>
+	</error-page>	
+	<error-page>
+		<error-code>500</error-code>
+		<location>/WEB-INF/error_pages/error_page_500.jsp</location>
+	</error-page>	
+	<error-page>
+		<exception-type>java.lang.Throwable</exception-type>
+		<location>/WEB-INF/error_pages/error_page_500.jsp</location>
+	</error-page>  
+
+  <!-- JSP Tag Library Descriptors -->  
+  <taglib>  
+    <taglib-uri>/WEB-INF/tlds/struts-bean.tld</taglib-uri>  
+    <taglib-location>/WEB-INF/tlds/struts-bean.tld</taglib-location>  
+  </taglib>  
+  
+  <taglib>  
+    <taglib-uri>/WEB-INF/tlds/struts-html.tld</taglib-uri>  
+    <taglib-location>/WEB-INF/tlds/struts-html.tld</taglib-location>  
+  </taglib>  
+  
+  <taglib>  
+    <taglib-uri>/WEB-INF/tlds/struts-logic.tld</taglib-uri>  
+    <taglib-location>/WEB-INF/tlds/struts-logic.tld</taglib-location>  
+  </taglib>  
+ 
+  <taglib>  
+    <taglib-uri>/WEB-INF/tlds/response.tld</taglib-uri>  
+    <taglib-location>/WEB-INF/tlds/response.tld</taglib-location>  
+  </taglib> 
+  
+  <taglib>  
+    <taglib-uri>/WEB-INF/tlds/request.tld</taglib-uri>  
+    <taglib-location>/WEB-INF/tlds/request.tld</taglib-location>  
+  </taglib>    
+  
+  <taglib>  
+    <taglib-uri>/WEB-INF/tlds/datetime.tld</taglib-uri>  
+    <taglib-location>/WEB-INF/tlds/datetime.tld</taglib-location>  
+  </taglib>    
+
+	<!-- 
+	
+	In most situations you will want to restrict access to the software administrative 
+	pages so that the public will not have access to sensitive information or be able 
+	to change your settings. To enable password protection for the administrative pages, 
+	do the following in your Tomcat installation (BASIC Auth):
+
+	1. Uncomment the 'security-constraint' and 'login-config' elements found below (if needed)
+
+	2. Edit the Tomcat file ${tomcat}/conf/tomcat-users.xml and add a role 'oai_admin' and one
+	or more users/passwords with role 'oai_admin'. See the notest in tomcat-users.xml for
+	details about the format of that file.
+	you wish to grant access to the OAI administration pages. An example user and 
+	instructions are provided in that file.
+
+	3. Start or restart Tomcat.
+
+    4. (recommended) BASIC auth does not encrypt user names and passwords sent over the Internet.
+    To enable encryption, configure jOAI to run under https/ssl. You may use Apache Module mod_proxy_ajp
+    (or the older mod_jk) to proxy the jOAI webapp through your Apache HTTP server and configure https/ssl
+    to the jOAI administrative pages that way (see Apache HTTP server docs for details).
+	-->	  
+	
+	<!-- Configuration for user authentication - uncomment to enable (see above) -->
+	@DIST-COMMENT-OPEN@ 	
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>jOAI Application</web-resource-name>
+			<url-pattern>/admin/*</url-pattern>
+			<url-pattern>/provider.do</url-pattern>
+			<url-pattern>/zipped_harvests/*</url-pattern>
+			<url-pattern>/backup_harvests/*</url-pattern>
+		</web-resource-collection>
+		<auth-constraint>
+			<role-name>oai_admin</role-name>
+		</auth-constraint>
+	</security-constraint>
+	<login-config>
+		<auth-method>BASIC</auth-method>
+		<realm-name>jOAI Administration</realm-name>
+	</login-config>
+	<security-role>
+		<role-name>oai_admin</role-name>
+	</security-role>	
+	@DIST-COMMENT-CLOSE@  
+  
+</web-app>  

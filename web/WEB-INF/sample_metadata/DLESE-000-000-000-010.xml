@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itemRecord xmlns="http://adn.dlese.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://adn.dlese.org http://www.dlese.org/Metadata/adn-item/0.6.50/record.xsd">
+		<general>
+		<title>The DataStreme Project</title>
+		<description>The DataStreme Project is a pre-college teacher enhancement initiative of the American Meteorological Society (AMS). Its main goal is the training of Weather Education Resource Teachers who will promote the teaching of science, mathematics and technology using weather as a vehicle, across the K-12 curriculum in their home school districts. The initial step in the training of Resource Teachers is their participation in the DataStreme distance-learning course. The 13-week course is offered twice a year to selected participants. It focuses on the study of the atmospheric environment through the use of electronically transmitted weather data and learning materials combined with Study Guide readings and investigations. The Project is funded by the National Science Foundation with assistance from the U.S. National Weather Service and the State University of New York College at Brockport. DataStreme expects to train over 4,000 teachers nationally.</description>
+		<language>en</language>
+		<subjects>
+		<subject>DLESE:Atmospheric science</subject>
+		</subjects>
+		</general>
+		<lifecycle>
+		<contributors>
+		<contributor role="Publisher" date="1999">
+		<organization>
+		<instName>American Meteorological Society</instName>
+		<instEmail>amsedu@dc.ametsoc.org</instEmail>
+		</organization>
+		</contributor>
+		</contributors>
+		</lifecycle>
+		<metaMetadata>
+		<catalogEntries>
+		<catalog entry="DLESE-000-000-000-010">DLESE Program Center Catalog Record Number</catalog>
+		</catalogEntries>
+		<dateInfo created="2000-11-10" accessioned="2000-11-10"/>
+		<statusOf status="Accessioned"/>
+		<language>en</language>
+		<scheme>ADN (ADEPT/DLESE/NASA Alexandria Digital Earth Prototype/Digital Library for Earth System Education/National Aeronautics and Space Administration)</scheme>
+		<copyright>Copyright (c) 2002 UCAR (University Corporation for Atmospheric Research)</copyright>
+		<termsOfUse URI="http://www.dlese.org/documents/policy/terms_use_full.html">Terms of use consistent with DLESE (Digital Library for Earth System Education) policy.</termsOfUse>
+		
+		</metaMetadata>
+		<technical>
+		<online>
+		<primaryURL>http://dstreme.comet.ucar.edu/index.html</primaryURL>
+		<mirrorURLs>
+		<mirrorURL>http://www.ametsoc.org/dstreme/index.html</mirrorURL>
+		<mirrorURL>http://www.comet.ucar.edu/dstreme/index.html</mirrorURL>
+		
+		</mirrorURLs>
+		<mediums>
+		<medium>text/html</medium>
+		</mediums>
+		<requirements>
+		<requirement>
+		<reqType>DLESE:General:No specific technical requirements</reqType>
+		</requirement>
+		</requirements>
+		</online>
+		</technical>
+		<educational>
+		<audiences>
+		<audience>
+		<gradeRange>DLESE:Graduate or professional</gradeRange>
+		</audience>
+		<audience>
+		<gradeRange>DLESE:High school</gradeRange>
+		</audience>
+		<audience>
+		<gradeRange>DLESE:Intermediate elementary</gradeRange>
+		</audience>
+		<audience>
+		<gradeRange>DLESE:Middle school</gradeRange>
+		</audience>
+		<audience>
+		<gradeRange>DLESE:Primary elementary</gradeRange>
+		</audience>
+		</audiences>
+		<resourceTypes>
+		<resourceType>DLESE:Learning materials:Course</resourceType>
+		<resourceType>DLESE:Visual:Remotely sensed imagery</resourceType>
+		<resourceType>DLESE:Visual:Scientific visualization</resourceType>
+		</resourceTypes>
+		
+		</educational>
+		<rights>
+		<cost>DLESE:No</cost>
+		<description>© Copyright 1999: American Meteorological Society</description>
+		</rights>
+		</itemRecord>

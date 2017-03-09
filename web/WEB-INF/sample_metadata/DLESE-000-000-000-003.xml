@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itemRecord xmlns="http://adn.dlese.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://adn.dlese.org http://www.dlese.org/Metadata/adn-item/0.6.50/record.xsd">
+		<general>
+		<title>AS3: Introduction to the Atmospheric Environment</title>
+		<description>An introductory course on general meteorology, primarily for the non-science major. The physical nature of the atmosphere is presented in a visual and descriptive manner. Lecture screens with hyperlinked background material are available at the site and as downloadable files. Topics include heat transfer and energy in the atmosphere, temperature, water vapor, cloud formation, wind systems, air masses and storm systems. Exams, reading assignments and homework problem sets are also included.</description>
+		<language>en</language>
+		<subjects>
+		<subject>DLESE:Atmospheric science</subject>
+		</subjects>
+		</general>
+		<lifecycle>
+		<contributors>
+		<contributor role="Contact" date="2000">
+		<person>
+		<nameTitle>Dr</nameTitle>
+		<nameFirst>Jeffrey</nameFirst>
+		<nameMiddle>K.</nameMiddle>
+		<nameLast>Lew</nameLast>
+		<instName>University of California, Los Angeles (UCLA); Department of Atmospheric Sciences</instName>
+		<emailPrimary>lew@atmos.ucla.edu</emailPrimary>
+		</person>
+		</contributor>
+		</contributors>
+		</lifecycle>
+		<metaMetadata>
+		<catalogEntries>
+		<catalog entry="DLESE-000-000-000-003">DLESE Program Center Catalog Record Number</catalog>
+		</catalogEntries>
+		<dateInfo created="2000-11-14" accessioned="2000-11-14"/>
+		<statusOf status="Accessioned"/>
+		<language>en</language>
+		<scheme>ADN (ADEPT/DLESE/NASA Alexandria Digital Earth Prototype/Digital Library for Earth System Education/National Aeronautics and Space Administration)</scheme>
+		<copyright>Copyright (c) 2002 UCAR (University Corporation for Atmospheric Research)</copyright>
+		<termsOfUse URI="http://www.dlese.org/documents/policy/terms_use_full.html">Terms of use consistent with DLESE (Digital Library for Earth System Education) policy.</termsOfUse>
+		
+		</metaMetadata>
+		<technical>
+		<online>
+		<primaryURL>http://www.atmos.ucla.edu/AS3/index.html</primaryURL>
+		<mediums>
+		<medium>text/html</medium>
+		</mediums>
+		<requirements>
+		<requirement>
+		<reqType>DLESE:Software or plug-in:Adobe Acrobat reader</reqType>
+		</requirement>
+		<requirement>
+		<reqType>DLESE:Software or plug-in:Flash player</reqType>
+		</requirement>
+		<requirement>
+		<reqType>DLESE:Software or plug-in:QuickTime</reqType>
+		</requirement>
+		</requirements>
+		</online>
+		</technical>
+		<educational>
+		<audiences>
+		<audience>
+		<gradeRange>DLESE:Undergraduate lower division</gradeRange>
+		</audience>
+		</audiences>
+		<resourceTypes>
+		<resourceType>DLESE:Learning materials:Assessment</resourceType>
+		<resourceType>DLESE:Learning materials:Course</resourceType>
+		<resourceType>DLESE:Learning materials:Syllabus</resourceType>
+		</resourceTypes>
+		
+		</educational>
+		<rights>
+		<cost>DLESE:No</cost>
+		<description>All material in this web site is ©2000 by Jeffrey K. Lew. All rights reserved.</description>
+		</rights>
+		</itemRecord>

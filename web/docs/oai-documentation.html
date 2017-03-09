@@ -1,0 +1,109 @@
+<html>
+<head>
+<title> Documentation for jOAI Software </title>
+</head>
+<body>
+<h1> Documentation for the <a href="http://www.dlese.org/oai/index.jsp">jOAI Software</a></h1>
+
+<h2> Version 3.0.10</h2>
+<h2> Description </h2>
+<p>The jOAI software includes a data provider that supports the <a href="http://www.openarchives.org">Open 
+    Archives Initiative</a> <a href="http://www.openarchives.org/OAI/openarchivesprotocol.html">Protocol 
+    for Metadata Harvesting</a> (OAI-PMH) v2.0 and a harvester that supports OAI-PMH 
+  v2.0 and v1.1. The data provider serves metadata from XML files stored on a 
+  file system. Likewise, the harvester saves downloaded metadata to XML files 
+  on the local file system. In addition to standard OAI protocol support, the 
+  data provider includes a search web service similar to the <a href="http://oai.dlib.vt.edu/odl/">Open 
+    Digital Library</a> (ODL) search specification (odlsearch1), which supports 
+  keyword and fielded searching over the metadata repository. </p>
+<p>The software includes a number of feature that are designed to help support 
+  the activities of collection builders. These include the ability to validate 
+  individual or entire sets of metadata files in the repository, the ability to 
+  search over the full text in the metadata, and to search by metadata format 
+  and set. The harvester supports individual harvests or incremental harvests, 
+  and provides feedback to users about the progress of the the data transfer both 
+  during and after the harvest.</p>
+<p>Some of the features that are supported include sets, resumptionTokens, deletions, 
+  date granularity down to the second, gzip compression of data transferred over 
+  the Internet, and extendable plug-and-play metadata format conversion (supports 
+  XSLT or Java classes written for a specific format conversion). Reports are 
+  available to users that detail any errors found in the metadata records, and 
+  show the harvesting activity that has taken place in the data provider.</p>
+<p>The OAI software is designed using the Model-View-Controller architecture. 
+  See the <a href="oai-MVC-design.ppt">OAI architecture diagram</a> for details.</p>
+<p>The <a href="javadoc/index.html">DLESE Java library Javadoc</a> is available 
+  as a reference.</p>
+<p></p>
+<h2> Audience </h2>
+Collection builders and library administrators, DLESE collaborators needing an 
+out-of-the-box OAI solution. 
+<h2> How this component is used </h2>
+<p>For collection builders:</p>
+<ul>
+  <li>Add one or more sets of metadata files from a local repository to be served 
+    via OAI.</li>
+  <li>Search for individual records in the repository by keyword, set and/or metadata 
+    format. </li>
+  <li>View and validate individual records in the repository.</li>
+  <li>Harvest metadata from other OAI data providers.</li>
+</ul>
+<h2> Functional requirements </h2>
+<ul>
+  <li>Support the OAI-PMH v2.0 for both data providing and harvesting.</li>
+  <li>Provide and harvest metadata directly to/from files on disk.</li>
+  <li>Ability to transform ADN to the nsdl_dc and oai_dc formats for data providing.</li>
+  <li>Ability to serve multiple sets.</li>
+  <li>Perform schema validation of records.</li>
+  <li>Support deletions.</li>
+  <li>Support the ability to serve very large sets using resumptionTokens.</li>
+  <li>Ability to serve any schema-based metadata format.</li>
+  <li>Ability to serve the DLESE-IMS DTD-based format.</li>
+  <li>Distributed as an easy to install and use out-of-the-box OAI solution for 
+    use by DLESE partners and others in the OAI and open source communities.</li>
+</ul>
+<h2> Technologies used </h2>
+Java, J2EE, Struts, Lucene, Tomcat, Dom4j, JSTL tag libraries. 
+<h2> Development process and workflow </h2>
+<p>See the development 
+    process documentation for details on how the software is developed and 
+  deployed.</p>
+<h3>Release deployment process</h3>
+<p>The DLESE OAI software is made available to the DLESE, OAI and open source 
+  communities as an out-of-the-box OAI solution.
+  Two zipped archives are made available for download: 
+ one contains a binary Java WAR file that can be deployed directly into a servlet 
+ container such as Tomcat for rapid deployment. The other contains a source code 
+ distribution that can be built and deployed using Ant.</p>
+<p>The software is deployed in three steps:</p>
+<ol>
+  <li>The binary and source distributions are built with ant using the 'dist' 
+    target (see development 
+      process documentation for details).</li>
+  <li>The source and binary distributions are uploaded to the download server. </li>
+  <li>Instructions and change notes are uploaded server, and updated on the metadata web page as necessary.<br>
+  </li>
+</ol>
+<h2> Testing and maintenance procedures </h2>
+See the development 
+  process documentation section on testing. 
+
+<h2> Links to additional documentation </h2>
+<ul>
+  <li>The <a href="http://swiki.dpc.ucar.edu/Project-Discovery/44">DLESE v2.0 
+      Overview</a> and the <a href="http://swiki.dpc.ucar.edu/Project-Discovery/uploads/Discovery_architecture_overview.11.ppt">DLESE 
+      v2.0 architecture diagram</a> provide a nice overview of the wider scope 
+    that encompass the DDS. </li>
+  <li>The <a href="http://www.dlese.org/oai/docs/index.html">official DLESE OAI 
+      software documentation</a>.</li>
+  <li>The <a href="http://www.dlese.org/libdev/interop/oai/index.html">DLESE OAI 
+      web site.</a></li>
+</ul>
+<p> <br>
+  <i>Last updated: May, 2007 </i><br>
+  <i>Author: John Weatherley</i><br>
+</p>
+</body>
+</html>
+
+
+

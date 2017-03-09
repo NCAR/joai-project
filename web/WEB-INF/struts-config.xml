@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+  <!-- This is the struts config for the jOAI application -->
+  
+  <!DOCTYPE struts-config PUBLIC  
+          "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"  
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+  <struts-config> 
+    
+	<!-- ========== Form Bean Definitions =================================== -->
+    
+	<form-beans> 
+		<form-bean 	
+			name="rf"  
+			type="org.dlese.dpc.repository.action.form.RepositoryForm"/>  
+		<form-bean 	
+			name="paf"  
+			type="org.dlese.dpc.repository.action.form.RepositoryAdminForm"/>  		
+		<form-bean 	
+			name="raf"  
+			type="org.dlese.dpc.repository.action.form.RepositoryAdminForm"/>  	 
+		<form-bean 	
+			name="queryForm"  
+			type="org.dlese.dpc.action.form.SimpleQueryForm"/>
+		<form-bean 	
+			name="osf"  
+			type="org.dlese.dpc.odlsearchclient.action.form.OdlSearchForm"/>
+		<form-bean 	
+			name="reportForm"  
+			type="org.dlese.dpc.action.form.SimpleQueryForm"/>  
+		<form-bean 	
+			name="opsf"  
+			type="org.dlese.dpc.oai.provider.action.form.OaiPmhSearchForm"/> 
+		<form-bean 	
+			name="haf"  
+			type="org.dlese.dpc.oai.harvester.action.form.HarvesterAdminForm"/>
+		<form-bean 	
+			name="hrf"  
+			type="org.dlese.dpc.oai.harvester.action.form.HarvestReportForm"/>		
+		<form-bean 
+			name="metadataDirsForm"
+			type="org.dlese.dpc.repository.action.form.MetadataDirectoryInfoForm" />
+		<form-bean 
+			name="setDefinitionsForm"
+			type="org.dlese.dpc.repository.action.form.SetDefinitionsForm" />
+		<form-bean 
+			name="repositoryInfoForm"
+			type="org.dlese.dpc.repository.action.form.RepositoryInfoForm" />			
+	</form-beans>
+    
+	
+	<!-- ========== Global Forward Definitions ============================== -->
+    <global-forwards> 
+		<!-- Example logon forward   
+		<forward   name="logon"                path="/logon.jsp"/>  
+		-->
+		<forward name="edit_harvester" path="/admin/edit_harvester_settings.jsp" />
+		<forward name="update.set.definition" path="/admin/dp_metadata/add_set_definition.jsp" />
+		<forward name="update.repository.info" path="/admin/dp_metadata/repository_info_form.jsp" />
+    </global-forwards>
+    
+	
+	<!-- ========== Action Mapping Definitions ============================== -->
+    <action-mappings> 
+    
+	<!-- The OAI-PMH data provider -->
+	<action	path="/provider" 
+			type="org.dlese.dpc.repository.action.RepositoryAction" 
+			name="rf"
+			scope="request" 
+			validate="false">  
+		<forward name="oaipmh.Identify" path="/oai_requests/Identify.jsp"/>
+		<forward name="oaipmh.ListSets" path="/oai_requests/ListSets.jsp"/>
+		<forward name="oaipmh.ListIdentifiers" path="/oai_requests/ListIdentifiers.jsp"/>
+		<forward name="oaipmh.ListMetadataFormats" path="/oai_requests/ListMetadataFormats.jsp"/>
+		<forward name="oaipmh.ListRecords" path="/oai_requests/ListRecords.jsp"/>
+		<forward name="oaipmh.GetRecord" path="/oai_requests/GetRecord.jsp"/>
+		<forward name="oaipmh.error" path="/oai_requests/errors.jsp"/>
+		<forward name="oaipmh.disabled" path="/oai_requests/disabled.jsp"/>
+		<forward name="error.500" path="/WEB-INF/error_pages/error_page_500.jsp"/>
+	</action>  
+
+	<!-- View/edit the data provider's metadata and other coniguration -->
+	<action	path="/admin/data-provider-info" 
+			type="org.dlese.dpc.repository.action.RepositoryAdminAction" 
+			scope="request"
+			name="raf"
+			validate="true"
+			input="edit.repository.settings">  
+		<forward name="display.repository.settings" path="/admin/dp_metadata/repository_administration.jsp"/>
+		<forward name="edit.repository.settings" path="/admin/dp_metadata/edit_response_length_settings.jsp"/>
+	</action> 
+
+	<!-- View/edit the data provider's metadata -->
+	<action	path="/admin/data-provider" 
+			type="org.dlese.dpc.repository.action.RepositoryAdminAction" 
+			scope="request"
+			name="raf"
+			validate="true"
+			input="edit.repository.settings">  
+		<forward name="display.repository.settings" path="/admin/dp_metadata/display_metadata_directories.jsp"/>
+	</action> 	
+	
+	
+	<!-- View the data provider's sets coniguration -->
+	<action	path="/admin/data-provider/sets" 
+			type="org.dlese.dpc.repository.action.RepositoryAdminAction" 
+			scope="request"
+			name="raf"
+			validate="true">  
+		<forward name="display.repository.settings" path="/admin/dp_metadata/display_sets.jsp"/>
+	</action>
+
+    <!-- Input for handling set definitions (Note: This sets forms config is a good action/form forwrding scheme to follow) -->
+    <action path="/admin/set_definition-view" forward="/admin/dp_metadata/add_set_definition.jsp" />
+	<action path="/admin/update_set_definition" forward="/admin/data-provider/sets.do" />
+    <action path="/admin/set_definition-validate" 
+			type="org.apache.struts.actions.ForwardAction" 
+			name="setDefinitionsForm" 
+			scope="request" 
+            parameter="/admin/data-provider/sets.do" 
+			validate="true" 
+			input="input">
+		<forward name="input" path="/admin/set_definition-view.do" />
+    </action>
+	
+    <!-- Input for handling metadata dirs -->
+    <action path="/admin/metadata_dir-view" forward="/admin/dp_metadata/edit_metadata_dir.jsp" />
+	<action path="/admin/update_metadata_dir" forward="/admin/data-provider.do" />	
+    <action path="/admin/metadata_dir-validate" 
+			type="org.apache.struts.actions.ForwardAction" 
+			name="metadataDirsForm" 
+			scope="request" 
+            parameter="/admin/data-provider.do" 
+			validate="true" 
+			input="input" >
+		<forward name="input" path="/admin/metadata_dir-view.do" />
+    </action>
+
+    <!-- Input for handling repository info (name, description, e-mail etc) -->
+    <action path="/admin/repository_info-view" forward="/admin/dp_metadata/repository_info_form.jsp" />
+	<action path="/admin/update_repository_info" forward="/admin/data-provider-info.do" />
+    <action path="/admin/repository_info-validate" 
+			type="org.apache.struts.actions.ForwardAction" 
+			name="repositoryInfoForm" 
+			scope="request" 
+            parameter="/admin/data-provider-info.do" 
+			validate="true" 
+			input="input" >
+		<forward name="input" path="/admin/repository_info-view.do" />
+    </action>
+	
+	<!-- Data Provider keyword search and display pages -->
+	<action	path="/admin/query" 
+			type="org.dlese.dpc.action.SimpleQueryAction" 
+			scope="session"
+			name="queryForm"
+			validate="true"
+			input="/admin/search.jsp">   
+		<forward name="simple.query" path="/admin/search.jsp"/>
+		<forward name="weblog.query" path="/admin/search.jsp"/>
+		<forward name="data.display" path="/admin/display.jsp"/>
+	</action> 
+
+	<!--  Data Provider Reports pages -->
+	<action	path="/admin/report" 
+			type="org.dlese.dpc.action.SimpleQueryAction" 
+			scope="request"
+			name="reportForm"
+			validate="true"
+			input="/admin/search.jsp">   
+		<forward name="report.query" path="/admin/reports.jsp"/>
+		<forward name="weblogreport.query" path="/admin/reports.jsp"/>
+	</action> 	
+	
+	<!-- Data Provider explorer page -->
+	<action	path="/oaisearch" 
+			type="org.dlese.dpc.oai.provider.action.OaiPmhSearchAction" 
+			scope="session"
+			name="opsf"
+			validate="true"
+			input="/oai_pmh_search.jsp">   
+		<forward name="oaipmh.search" path="/oai_pmh_search.jsp"/>
+		<forward name="odl.search" path="/odl_search.jsp"/>
+	</action> 
+
+	<!-- Odl explorer page  -->
+	<action	path="/docs/odlsearch" 
+			type="org.dlese.dpc.oai.provider.action.OaiPmhSearchAction" 
+			scope="session"
+			name="opsf"
+			validate="true"
+			input="/docs/odl_search.jsp">   
+		<forward name="oaipmh.search" path="/docs/odl_search.jsp"/>
+		<forward name="odl.search" path="/docs/odl_search.jsp"/>
+	</action> 	
+	
+	<!-- Harvester admin pages -->
+	<action	path="/admin/harvester" 
+			type="org.dlese.dpc.oai.harvester.action.HarvesterAdminAction" 
+			scope="session"
+			name="haf"
+			validate="true"
+			input="edit_harvester">  
+		<forward name="display.harvester.settings" path="/admin/display_harvester_settings.jsp"/>    
+		<forward name="edit.harvester.settings" path="/admin/edit_harvester_settings.jsp"/>
+	</action>  
+	
+	<!-- Harvest reports -->
+	<action	path="/admin/harvestreport" 
+			type="org.dlese.dpc.oai.harvester.action.HarvestReportAction" 
+			scope="request"
+			name="hrf"
+			validate="true"
+			input="/admin/harvestReports.jsp">   
+		<forward name="display.report" path="/admin/harvestReports.jsp"/>
+	</action> 		
+	
+    
+	</action-mappings>
+	
+	<!-- ============================================= Controller Definition  -->
+	<controller inputForward="true" />
+	
+	<!-- Resource bundle -->
+	<message-resources null="false" parameter="ApplicationResources"/>
+	
+	<!-- ====================== Plug Ins Configuration ======================   -->
+	
+	<!-- 
+	   Add multiple validator resource files by setting the pathnames property 
+	   with a comma delimitted list of resource files to load. 
+	-->
+	<plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+		<set-property property="pathnames" value="/WEB-INF/validator-rules.xml,/WEB-INF/validation.xml" />
+		<set-property property="stopOnFirstError" value="true" />
+	</plug-in>	
+	
+  </struts-config>

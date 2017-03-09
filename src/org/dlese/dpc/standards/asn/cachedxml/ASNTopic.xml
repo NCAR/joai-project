@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+  <skos:ConceptScheme rdf:about="http://purl.org/ASN/scheme/ASNTopic/">
+    <dc:title xml:lang="en">Achievement Standards Subject Vocabulary</dc:title>
+    <dcterms:created>2005-07-12</dcterms:created>
+    <dcterms:modified>2009-09-08</dcterms:modified>
+  </skos:ConceptScheme>
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNTopic/english">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNTopic/"/>
+    <skos:prefLabel xml:lang="en">English</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNTopic/math">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNTopic/"/>
+    <skos:prefLabel xml:lang="en">Math</skos:prefLabel>
+    <skos:altLabel xml:lang="en">Mathematics</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNTopic/science">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNTopic/"/>
+    <skos:prefLabel xml:lang="en">Science</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNTopic/theArts">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNTopic/"/>
+    <skos:prefLabel xml:lang="en">The Arts</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNTopic/foreignLanguage">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNTopic/"/>
+    <skos:prefLabel xml:lang="en">Foreign Language</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNTopic/health">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNTopic/"/>
+    <skos:prefLabel xml:lang="en">Health</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNTopic/physicalEducation">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNTopic/"/>
+    <skos:prefLabel xml:lang="en">Physical Education</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNTopic/technology">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNTopic/"/>
+    <skos:prefLabel xml:lang="en">Technology</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNTopic/lifeSkills">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNTopic/"/>
+    <skos:prefLabel xml:lang="en">Life Skills</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNTopic"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNTopic/careerEducation">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNTopic/"/>
+    <skos:prefLabel xml:lang="en">Career Education</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNTopic/socialStudies">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNTopic/"/>
+    <skos:prefLabel xml:lang="en">Social Studies</skos:prefLabel>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNTopic/behavioralStudies"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNTopic/civics"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNTopic/economics"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNTopic/geography"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNTopic/historicalUnderstanding"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNTopic/usHistory"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNTopic/worldHistory"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNTopic/k-4HistoryAndStateHistory"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNTopic/behavioralStudies">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNTopic/"/>
+    <skos:prefLabel xml:lang="en">Behavioral Studies</skos:prefLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNTopic/socialStudies"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNTopic/civics">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNTopic/"/>
+    <skos:prefLabel xml:lang="en">Civics</skos:prefLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNTopic/socialStudies"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNTopic/economics">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNTopic/"/>
+    <skos:prefLabel xml:lang="en">Economics</skos:prefLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNTopic/socialStudies"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNTopic/geography">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNTopic/"/>
+    <skos:prefLabel xml:lang="en">Geography</skos:prefLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNTopic/socialStudies"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNTopic/historicalUnderstanding">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNTopic/"/>
+    <skos:prefLabel xml:lang="en">Historical Understanding</skos:prefLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNTopic/socialStudies"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNTopic/usHistory">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNTopic/"/>
+    <skos:prefLabel xml:lang="en">U.S. History</skos:prefLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNTopic/socialStudies"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNTopic/worldHistory">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNTopic/"/>
+    <skos:prefLabel xml:lang="en">World History</skos:prefLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNTopic/k-4HistoryAndStateHistory">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNTopic/"/>
+    <skos:prefLabel xml:lang="en">K-4 History and State History</skos:prefLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNTopic/socialStudies"/>
+  </skos:Concept>
+</rdf:RDF>

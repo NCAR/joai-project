@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itemRecord xmlns="http://adn.dlese.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://adn.dlese.org http://www.dlese.org/Metadata/adn-item/0.6.50/record.xsd">
+		<general>
+		<title>Global Climate Change</title>
+		<description>Global Climate Change is one of the Exploring the Environment series of online modules. Emphasizing an integrated approach to environmental earth science through problem-based learning, this module asks students to predict how increasing atmospheric concentrations of carbon dioxide is changing the climate, and the possible effects this may have on Kansas wheat crops. Students access remote sensing data via links to both current and historical data and work through a sequence of hyperlinked background resources to investigate this problem. The site also offers a glossary, teacher resources, and a general description of the problem-based learning model.</description>
+		<language>en</language>
+		<subjects>
+		<subject>DLESE:Atmospheric science</subject>
+		<subject>DLESE:Climatology</subject>
+		</subjects>
+		</general>
+		<lifecycle>
+		<contributors>
+		<contributor role="Contact" date="2000">
+		<person>
+		<nameTitle>Dr</nameTitle>
+		<nameFirst>Robert</nameFirst>
+		<nameLast>Myers</nameLast>
+		<instName>National Aeronautics and Space Administration (NASA) Classroom of the Future, Wheeling Jesuit University</instName>
+		<emailPrimary>bmyers@cet.edu</emailPrimary>
+		</person>
+		</contributor>
+		</contributors>
+		</lifecycle>
+		<metaMetadata>
+		<catalogEntries>
+		<catalog entry="DLESE-000-000-000-004">DLESE Program Center Catalog Record Number</catalog>
+		</catalogEntries>
+		<dateInfo created="2000-11-13" accessioned="2000-11-13"/>
+		<statusOf status="Accessioned"/>
+		<language>en</language>
+		<scheme>ADN (ADEPT/DLESE/NASA Alexandria Digital Earth Prototype/Digital Library for Earth System Education/National Aeronautics and Space Administration)</scheme>
+		<copyright>Copyright (c) 2002 UCAR (University Corporation for Atmospheric Research)</copyright>
+		<termsOfUse URI="http://www.dlese.org/documents/policy/terms_use_full.html">Terms of use consistent with DLESE (Digital Library for Earth System Education) policy.</termsOfUse>
+		
+		</metaMetadata>
+		<technical>
+		<online>
+		<primaryURL>http://www.cotf.edu/ete/modules/climate/GCmain.html</primaryURL>
+		<mediums>
+		<medium>text/html</medium>
+		</mediums>
+		<requirements>
+		<requirement>
+		<reqType>DLESE:General:No specific technical requirements</reqType>
+		</requirement>
+		</requirements>
+		</online>
+		</technical>
+		<educational>
+		<audiences>
+		<audience>
+		<gradeRange>DLESE:High school</gradeRange>
+		</audience>
+		<audience>
+		<gradeRange>DLESE:Middle school</gradeRange>
+		</audience>
+		</audiences>
+		<resourceTypes>
+		<resourceType>DLESE:Learning materials:Instructor guide</resourceType>
+		<resourceType>DLESE:Learning materials:Module or unit</resourceType>
+		<resourceType>DLESE:Text:Glossary</resourceType>
+		</resourceTypes>
+		
+		</educational>
+		<rights>
+		<cost>DLESE:No</cost>
+		<description>Copyright© 1999-2000, Wheeling Jesuit University/Center for Educational Technologies™. All rights reserved. Copyright© 1997-2000, Wheeling Jesuit University/NASA Classroom of the Future™. All rights reserved. Permission to make digital or hard copies of part or all of this work for personal or classroom use is granted provided that copies are not made or distributed for profit or direct commercial advantage and that copies bear this notice and the full citation on the first page. However, copyrights for components of this work owned by others than the Center for Educational Technologies™/ NASA Classroom of the Future™ must be honored as follows: abstracting with credit is permitted, but anyone copying information must abide by the terms and constraints of the copyright protecting all components. For example, reposting any part of a component requires explicit permission of the holder of copyright of that component. Mirroring all or any part of this site requires our permission and the permission of the copyright holder. Where components are in the U.S. public domain this fact is stated. Caution is advised in copying and distributing U.S. public domain works in countries other than the U.S., where different laws may apply.</description>
+		</rights>
+		</itemRecord>

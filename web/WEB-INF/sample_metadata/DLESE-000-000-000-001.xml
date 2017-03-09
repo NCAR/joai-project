@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itemRecord xmlns="http://adn.dlese.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://adn.dlese.org http://www.dlese.org/Metadata/adn-item/0.6.50/record.xsd">
+		<general>
+		<title>Air Quality Meteorology</title>
+		<description>The goal of this course is to introduce participants to the basic concepts of meteorology and air quality necessary to understand meteorological computer models. This course, along with companion courses in Computational Atmospheric Science and Emissions, anticipates the Models3 environment under development by the U.S. Environmental Protection Agency (EPA). Upon completion of the course, participants should understand the fundamental principles of meteorology. In addition, participants will be introduced to the application of these principles to air quality, especially through atmospheric modeling. Moreover, during the course a number of issues involved in simulating atmospheric processes in a computer-based model will be presented. This course is designed to provide scientific background that will help the participant move quickly "up the ramp" in terms of understanding and using a computational science approach to studying complex environmental phenomena. Upon completion of this course, a person will be able to: 1) describe the basic concepts, relationships, and terms that Models3 or a similar meteorological air quality model employs to represent the meteorological aspects of the model, and 2) describe several key relationships between meteorological phenomena and air quality. This course assumes the participant holds a bachelor's degree in a science-related field such as physics, chemistry, or geology and has some additional familiarity with environmental issues. Others with less experience will also find the material useful, but may not have the necessary background to understand all of the material, especially some of the higher level mathematics, presented in the course.</description>
+		<language>en</language>
+		<subjects>
+		<subject>DLESE:Atmospheric science</subject>
+		</subjects>
+		</general>
+		<lifecycle>
+		<contributors>
+		<contributor role="Publisher" date="1996">
+		<organization>
+		<instName>The Shodor Education Foundation, Inc.</instName>
+		<instEmail>info@shodor.org</instEmail>
+		</organization>
+		</contributor>
+		</contributors>
+		</lifecycle>
+		<metaMetadata>
+		<catalogEntries>
+		<catalog entry="DLESE-000-000-000-001">DLESE Program Center Catalog Record Number</catalog>
+		</catalogEntries>
+		<dateInfo created="2000-12-01" accessioned="2000-12-01"/>
+		<statusOf status="Accessioned"/>
+		<language>en</language>
+		<scheme>ADN (ADEPT/DLESE/NASA Alexandria Digital Earth Prototype/Digital Library for Earth System Education/National Aeronautics and Space Administration)</scheme>
+		<copyright>Copyright (c) 2002 UCAR (University Corporation for Atmospheric Research)</copyright>
+		<termsOfUse URI="http://www.dlese.org/documents/policy/terms_use_full.html">Terms of use consistent with DLESE (Digital Library for Earth System Education) policy.</termsOfUse>
+		
+		</metaMetadata>
+		<technical>
+		<online>
+		<primaryURL>http://www.shodor.org/metweb/index.html</primaryURL>
+		<mediums>
+		<medium>text/html</medium>
+		</mediums>
+		<requirements>
+		<requirement>
+		<reqType>DLESE:Browser:Netscape</reqType>
+		<minimumVersion>2.0</minimumVersion>
+</requirement>
+		</requirements>
+		</online>
+		</technical>
+		<educational>
+		<audiences>
+		<audience>
+		<gradeRange>DLESE:Graduate or professional</gradeRange>
+		</audience>
+		<audience>
+		<gradeRange>DLESE:Undergraduate upper division</gradeRange>
+		</audience>
+		</audiences>
+		<resourceTypes>
+		<resourceType>DLESE:Learning materials:Course</resourceType>
+		</resourceTypes>
+		
+		</educational>
+		<rights>
+		<cost>DLESE:No</cost>
+		<description>The Shodor Education Foundation, Inc., Copyright © 1996</description>
+		</rights>
+		</itemRecord>

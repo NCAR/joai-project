@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itemRecord xmlns="http://adn.dlese.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://adn.dlese.org http://www.dlese.org/Metadata/adn-item/0.6.50/record.xsd">
+		<general>
+		<title>El Nino Theme Page: Access to Distributed Information on El Nino</title>
+		<description>This concentrated, in-depth resource provides access to recent information on El Nino Southern Oscillation (ENSO) and La Nina in the Pacific Ocean, including data, graphics, forecasts, historical perspectives, in-depth analyses, prediction benefits, impacts on human life, and information on the 1997/1999 El Nino and La Nina events. Links to relevant data include Tropical Atmosphere Ocean Project (TAO) moored buoy data, XBT data, drifting buoy data, sea level field analyses, real-time data and analyses, satellite data, climate data, numerical model simulations and Ka'Imimoana shipboard data. The site also includes 3D animations and links to theme pages in Spanish, French, and Portuguese.</description>
+		<language>en</language>
+		<subjects>
+		<subject>DLESE:Atmospheric science</subject>
+		<subject>DLESE:Biological oceanography</subject>
+		<subject>DLESE:Physical oceanography</subject>
+		</subjects>
+		</general>
+		<lifecycle>
+		<contributors>
+		<contributor role="Publisher">
+		<organization>
+		<instName>Department of Commerce, National Oceanic and Atmospheric Administration (NOAA), Pacific Marine Environmental Laboratory, Tropical Atmosphere Ocean Project</instName>
+		<instEmail>taogroup@pmel.noaa.gov</instEmail>
+		</organization>
+		</contributor>
+		</contributors>
+		</lifecycle>
+		<metaMetadata>
+		<catalogEntries>
+		<catalog entry="DLESE-000-000-000-013">DLESE Program Center Catalog Record Number</catalog>
+		</catalogEntries>
+		<dateInfo created="2000-11-25" accessioned="2000-11-25"/>
+		<statusOf status="Accessioned"/>
+		<language>en</language>
+		<scheme>ADN (ADEPT/DLESE/NASA Alexandria Digital Earth Prototype/Digital Library for Earth System Education/National Aeronautics and Space Administration)</scheme>
+		<copyright>Copyright (c) 2002 UCAR (University Corporation for Atmospheric Research)</copyright>
+		<termsOfUse URI="http://www.dlese.org/documents/policy/terms_use_full.html">Terms of use consistent with DLESE (Digital Library for Earth System Education) policy.</termsOfUse>
+		
+		</metaMetadata>
+		<technical>
+		<online>
+		<primaryURL>http://www.pmel.noaa.gov/tao/elnino/nino-home.html</primaryURL>
+		<mediums>
+		<medium>text/html</medium>
+		<medium>image/gif</medium>
+		</mediums>
+		<requirements>
+		<requirement>
+		<reqType>DLESE:General:No specific technical requirements</reqType>
+		</requirement>
+		</requirements>
+		</online>
+		</technical>
+		<educational>
+		<audiences>
+		<audience>
+		<gradeRange>DLESE:Graduate or professional</gradeRange>
+		</audience>
+		<audience>
+		<gradeRange>DLESE:High school</gradeRange>
+		</audience>
+		<audience>
+		<gradeRange>DLESE:Middle school</gradeRange>
+		</audience>
+		<audience>
+		<gradeRange>DLESE:Undergraduate lower division</gradeRange>
+		</audience>
+		<audience>
+		<gradeRange>DLESE:Undergraduate upper division</gradeRange>
+		</audience>
+		</audiences>
+		<resourceTypes>
+		<resourceType>DLESE:Data:In situ dataset</resourceType>
+		<resourceType>DLESE:Data:Remotely sensed dataset</resourceType>
+		<resourceType>DLESE:Portal:Government portal</resourceType>
+		<resourceType>DLESE:Visual:Scientific visualization</resourceType>
+		</resourceTypes>
+		
+		</educational>
+		<rights>
+		<cost>DLESE:No</cost>
+		<description>Copyright and Other Restrictions Information is Unknown</description>
+		</rights>
+		</itemRecord>

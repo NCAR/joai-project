@@ -1,0 +1,31 @@
+<collectionRecord>
+<!--
+  This record describes a collection within the DDS respository.
+  It is generated internally by the DDS system when a
+  PutCollection request is made.
+  
+  The structure is based on the DLESE collection schema: 
+  http://www.dlese.org/Metadata/collection/1.0.00/collection.xsd
+-->
+	  <general>
+		<shortTitle>@TITLE@</shortTitle>
+		<description>@DESCRIPTION@</description>
+	  </general>
+	  <approval>
+		<collectionStatuses>
+		  <collectionStatus date="@ACCESSION_DATE@" state="Accessioned"/>
+		</collectionStatuses>
+	  </approval>
+	  <access>
+	  	<!-- Element key defines the unique collectionKey, Attribute libraryformat defines the XMLFormat for records in the collection. -->
+		<key libraryFormat="@FORMAT@" static="true" redistribute="false">@KEY@</key>
+	  </access>
+	  <metaMetadata>
+		<catalogEntries>
+		  <!-- Catalog/@entry defines the unique ID for the collection record. -->
+		  <catalog entry="@ID@"/>
+		</catalogEntries>
+	  </metaMetadata>
+	  <!-- The additionalMetadata Element contains any additional collection matadata that was supplied in the PutCollection request. -->
+	  <additionalMetadata>@ADDITIONAL_METADATA@</additionalMetadata>
+</collectionRecord>

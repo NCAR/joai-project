@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itemRecord xmlns="http://adn.dlese.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://adn.dlese.org http://www.dlese.org/Metadata/adn-item/0.6.50/record.xsd">
+		<general>
+		<title>USGS Earthquake Hazards Program</title>
+		<description>This is the home page of the Earthquake Hazards Program (EHP) of the United States Geological Survey (USGS). The EHP is part of the National Earthquake Hazards Reduction Program (NEHRP) lead by the Federal Emergency Management Agency (FEMA). This page is a gateway to pages on Earthquake Activity, Earthquake Education, Earthquake Products, Regional Centers, Seismic Networks, Latest Significant Earthquake, Frequently Asked Questions, Report an Earthquake, and Advanced National Seismic System (ANSS).</description>
+		<language>en</language>
+		<subjects>
+		<subject>DLESE:Natural hazards</subject>
+		<subject>DLESE:Geophysics</subject>
+		</subjects>
+		</general>
+		<lifecycle>
+		<contributors>
+		<contributor role="Publisher">
+		<organization>
+		<instName>United States Geological Survey (USGS)</instName>
+		</organization>
+		</contributor>
+		</contributors>
+		</lifecycle>
+		<metaMetadata>
+		<catalogEntries>
+		<catalog entry="DLESE-000-000-000-012">DLESE Program Center Catalog Record Number</catalog>
+		</catalogEntries>
+		<dateInfo created="2000-11-20" accessioned="2000-11-20"/>
+		<statusOf status="Accessioned"/>
+		<language>en</language>
+		<scheme>ADN (ADEPT/DLESE/NASA Alexandria Digital Earth Prototype/Digital Library for Earth System Education/National Aeronautics and Space Administration)</scheme>
+		<copyright>Copyright (c) 2002 UCAR (University Corporation for Atmospheric Research)</copyright>
+		<termsOfUse URI="http://www.dlese.org/documents/policy/terms_use_full.html">Terms of use consistent with DLESE (Digital Library for Earth System Education) policy.</termsOfUse>
+		
+		</metaMetadata>
+		<technical>
+		<online>
+		<primaryURL>http://earthquake.usgs.gov/index.html</primaryURL>
+		<mediums>
+		<medium>text/html</medium>
+		</mediums>
+		<requirements>
+		<requirement>
+		<reqType>DLESE:General:No specific technical requirements</reqType>
+		</requirement>
+		</requirements>
+		</online>
+		</technical>
+		<educational>
+		<audiences>
+		<audience>
+		<gradeRange>DLESE:Primary elementary</gradeRange>
+		</audience>
+		<audience>
+		<gradeRange>DLESE:Intermediate elementary</gradeRange>
+		</audience>
+		<audience>
+		<gradeRange>DLESE:Middle school</gradeRange>
+		</audience>
+		<audience>
+		<gradeRange>DLESE:High school</gradeRange>
+		</audience>
+		<audience>
+		<gradeRange>DLESE:Undergraduate lower division</gradeRange>
+		</audience>
+		<audience>
+		<gradeRange>DLESE:Undergraduate upper division</gradeRange>
+		</audience>
+		<audience>
+		<gradeRange>DLESE:Graduate or professional</gradeRange>
+		</audience>
+		<audience>
+		<gradeRange>DLESE:General public</gradeRange>
+		</audience>
+		</audiences>
+		<resourceTypes>
+		<resourceType>DLESE:Portal:Government portal</resourceType>
+		</resourceTypes>
+		
+		</educational>
+		<rights>
+		<cost>DLESE:No</cost>
+		<description>USGS-authored or produced data and information are in the public domain. While the content of most USGS web pages is in the public domain, not all the information on our site is in the public domain. Some images/graphics are used by USGS with permission. For other uses, you may need to obtain permission from the copyright holder under the copyright law.</description>
+		</rights>
+		</itemRecord>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itemRecord xmlns="http://adn.dlese.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://adn.dlese.org http://www.dlese.org/Metadata/adn-item/0.6.50/record.xsd">
+		<general>
+		<title>Acid Rain</title>
+		<description>This site provides information on what is acid rain; what is acidity; what are the effects of acid rain on forests, water, human-made materials, and people. The site contains nine experiments in measuring pH in common substances, water, and soil. Experiments also explore the influence of acid rain on plant growth, acid effects on metal, and the observation of buffers in lakes, ponds, and streams. Suggestions for activities for classrooms, individuals and small groups, and field trip ideas are listed. A link to lesson plans for K-12 from the Texas Natural Resource Conservation Commission is available, as is the Acid Rain Prgram Progress Report.</description>
+		<language>en</language>
+		<subjects>
+		<subject>DLESE:Environmental science</subject>
+		<subject>DLESE:Chemistry</subject>
+		</subjects>
+		<keywords>
+		<keyword>Dry deposition</keyword>
+		<keyword>Air pollution</keyword>
+		<keyword>pH</keyword>
+		<keyword>Sulfur emissions</keyword>
+		</keywords>
+		</general>
+		<lifecycle>
+		<contributors>
+		<contributor role="Publisher" date="1994-12">
+		<organization>
+		<instName>U. S. Environmental Protection Agency, Office of Research and Development, Acid Rain Program</instName>
+		</organization>
+		</contributor>
+		</contributors>
+		</lifecycle>
+		<metaMetadata>
+		<catalogEntries>
+		<catalog entry="DLESE-000-000-000-002">DLESE Program Center Catalog Record Number</catalog>
+		</catalogEntries>
+		<dateInfo created="2000-10-24" accessioned="2000-10-24"/>
+		<statusOf status="Accessioned"/>
+		<language>en</language>
+		<scheme>ADN (ADEPT/DLESE/NASA Alexandria Digital Earth Prototype/Digital Library for Earth System Education/National Aeronautics and Space Administration)</scheme>
+		<copyright>Copyright (c) 2002 UCAR (University Corporation for Atmospheric Research)</copyright>
+		<termsOfUse URI="http://www.dlese.org/documents/policy/terms_use_full.html">Terms of use consistent with DLESE (Digital Library for Earth System Education) policy.</termsOfUse>
+		
+		</metaMetadata>
+		<technical>
+		<online>
+		<primaryURL>http://www.epa.gov/airmarkets/acidrain/index.html</primaryURL>
+		<mediums>
+		<medium>text/html</medium>
+		</mediums>
+		<requirements>
+		<requirement>
+		<reqType>DLESE:General:No specific technical requirements</reqType>
+		</requirement>
+		</requirements>
+		</online>
+		</technical>
+		<educational>
+		<audiences>
+		<audience>
+		<gradeRange>DLESE:Primary elementary</gradeRange>
+		</audience>
+		<audience>
+		<gradeRange>DLESE:Intermediate elementary</gradeRange>
+		</audience>
+		<audience>
+		<gradeRange>DLESE:Middle school</gradeRange>
+		</audience>
+		<audience>
+		<gradeRange>DLESE:High school</gradeRange>
+		</audience>
+		<audience>
+		<gradeRange>DLESE:Undergraduate lower division</gradeRange>
+		</audience>
+		<audience>
+		<gradeRange>DLESE:General public</gradeRange>
+		</audience>
+		</audiences>
+		<resourceTypes>
+		<resourceType>DLESE:Learning materials:Classroom activity</resourceType>
+		<resourceType>DLESE:Learning materials:Field activity</resourceType>
+		<resourceType>DLESE:Learning materials:Lab activity</resourceType>
+		</resourceTypes>
+		
+		</educational>
+		<rights>
+		<cost>DLESE:No</cost>
+		<description>These pages are adapted from, and may be cited as, the following publication: Acid Rain: A Student's First Sourcebook, U.S. Environmental Protection Agency, Office of Research and Development, Washington, DC 20460, December 1994, publication number EPA/600/0-90/027a. EPA's documents are in the public domain and have no copyright; you may use text and graphics from this Web site without our permission.</description>
+		</rights>
+		</itemRecord>

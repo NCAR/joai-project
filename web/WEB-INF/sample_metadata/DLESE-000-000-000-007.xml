@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itemRecord xmlns="http://adn.dlese.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://adn.dlese.org http://www.dlese.org/Metadata/adn-item/0.6.50/record.xsd">
+		<general>
+		<title>Coriolis Force Demonstration - title enhanced by cataloger</title>
+		<description>This short video clip provides a real life example of the coriolis force. It is a movie of a ball rolling across the surface of a rotating merry-go-round. As the ball is passed from one person to another, the path of the ball appears to curve, however when viewed from above, the path is appears straight, exemplifying the effect the rotation of the Earth.</description>
+		<language>en</language>
+		<subjects>
+		<subject>DLESE:Atmospheric science</subject>
+		</subjects>
+		</general>
+		<lifecycle>
+		<contributors>
+		<contributor role="Publisher">
+		<organization>
+		<instName>University of Illinois at Urbana-Champaign, Department of Atmospheric Sciences, Weather World 2010 Project</instName>
+		<instEmail>ww2010@atmos.uiuc.edu</instEmail>
+		</organization>
+		</contributor>
+		</contributors>
+		</lifecycle>
+		<metaMetadata>
+		<catalogEntries>
+		<catalog entry="DLESE-000-000-000-007">DLESE Program Center Catalog Record Number</catalog>
+		</catalogEntries>
+		<dateInfo created="2000-11-30" accessioned="2000-11-30"/>
+		<statusOf status="Accessioned"/>
+		<language>en</language>
+		<scheme>ADN (ADEPT/DLESE/NASA Alexandria Digital Earth Prototype/Digital Library for Earth System Education/National Aeronautics and Space Administration)</scheme>
+		<copyright>Copyright (c) 2002 UCAR (University Corporation for Atmospheric Research)</copyright>
+		<termsOfUse URI="http://www.dlese.org/documents/policy/terms_use_full.html">Terms of use consistent with DLESE (Digital Library for Earth System Education) policy.</termsOfUse>
+		
+		</metaMetadata>
+		<technical>
+		<online>
+		<primaryURL>http://ww2010.atmos.uiuc.edu/(Gh)/guides/mtr/pw/gifs/coriolis.mpg</primaryURL>
+		<mediums>
+		<medium>text/html</medium>
+		<medium>video/quicktime</medium>
+		<medium>video/mpeg</medium>
+		</mediums>
+		<requirements>
+		<requirement>
+		<reqType>DLESE:Software or plug-in:QuickTime</reqType>
+		</requirement>
+		<requirement>
+		<reqType>DLESE:Other:More specific technical requirements</reqType>
+		</requirement>
+		</requirements>
+		<otherRequirements>
+		<otherRequirement>
+		<otherType>Windows Media Player</otherType>
+		</otherRequirement>
+		</otherRequirements>
+		</online>
+		</technical>
+		<educational>
+		<audiences>
+		<audience>
+		<gradeRange>DLESE:High school</gradeRange>
+		</audience>
+		<audience>
+		<gradeRange>DLESE:Middle school</gradeRange>
+		</audience>
+		</audiences>
+		<resourceTypes>
+		<resourceType>DLESE:Visual:Video</resourceType>
+		</resourceTypes>
+		
+		</educational>
+		<rights>
+		<cost>DLESE:No</cost>
+		<description>Content of this server are Copyright © 1997 by the University of Illinois Board of Trustees (except in the case of photos and other resources which are specifically identified). The names "Weather World 2010" and "WW2010"are trademarks ™ of the University of Illinois. Non-commercial use must be accompanied by appropriate credit visible with respect to the used item. "Image/Text/Data from the University of Illinois WW2010 Project." Web utilizations should, if possible, provide a link to our server nearby.</description>
+		</rights>
+		<relations>
+		<relation>
+		<urlEntry kind="DC:Is version of" url="http://ww2010.atmos.uiuc.edu/(Gh)/guides/mtr/pw/gifs/coriolis.mpg"/>
+		</relation>
+		</relations>
+		</itemRecord>

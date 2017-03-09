@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itemRecord xmlns="http://adn.dlese.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://adn.dlese.org http://www.dlese.org/Metadata/adn-item/0.6.50/record.xsd">
+		<general>
+		<title>State of the Cryosphere: An overview of the status of snow and ice as indicators of climate change</title>
+		<description>Climatologists know that the measure of the world's ice, in all its many dimensions and forms, is a measure of current conditions as well as of those frozen over time. These pages present a summary of cryospheric and related indicators of global climate trends including: temperature change over the past century, trends in hemispheric snow extent, trends in hemispheric sea ice extent, glacier melt, and changes in sea level. Also included is a snapshot of current permafrost conditions. Links to current news releases and journal articles, a glossary, and reference list are also provided.</description>
+		<language>en</language>
+		<subjects>
+		<subject>DLESE:Climatology</subject>
+		<subject>DLESE:Cryology</subject>
+		</subjects>
+		</general>
+		<lifecycle>
+		<contributors>
+		<contributor role="Contact">
+		<person>
+		<nameFirst>Richard</nameFirst>
+		<nameMiddle>L.</nameMiddle>
+		<nameLast>Armstrong</nameLast>
+		<instName>National Snow and Ice Data Center</instName>
+		<emailPrimary>nsidc@kryos.colorado.edu</emailPrimary>
+		</person>
+		</contributor>
+		</contributors>
+		</lifecycle>
+		<metaMetadata>
+		<catalogEntries>
+		<catalog entry="DLESE-000-000-000-009">DLESE Program Center Catalog Record Number</catalog>
+		</catalogEntries>
+		<dateInfo created="2000-11-20" accessioned="2000-11-20"/>
+		<statusOf status="Accessioned"/>
+		<language>en</language>
+		<scheme>ADN (ADEPT/DLESE/NASA Alexandria Digital Earth Prototype/Digital Library for Earth System Education/National Aeronautics and Space Administration)</scheme>
+		<copyright>Copyright (c) 2002 UCAR (University Corporation for Atmospheric Research)</copyright>
+		<termsOfUse URI="http://www.dlese.org/documents/policy/terms_use_full.html">Terms of use consistent with DLESE (Digital Library for Earth System Education) policy.</termsOfUse>
+		
+		</metaMetadata>
+		<technical>
+		<online>
+		<primaryURL>http://nsidc.org/sotc/index.html</primaryURL>
+		<mediums>
+		<medium>text/html</medium>
+		</mediums>
+		<requirements>
+		<requirement>
+		<reqType>DLESE:General:No specific technical requirements</reqType>
+		</requirement>
+		</requirements>
+		</online>
+		</technical>
+		<educational>
+		<audiences>
+		<audience>
+		<gradeRange>DLESE:High school</gradeRange>
+		</audience>
+		<audience>
+		<gradeRange>DLESE:Middle school</gradeRange>
+		</audience>
+		<audience>
+		<gradeRange>DLESE:Undergraduate lower division</gradeRange>
+		</audience>
+		</audiences>
+		<resourceTypes>
+		<resourceType>DLESE:Portal:Educational portal</resourceType>
+		</resourceTypes>
+		
+		</educational>
+		<rights>
+		<cost>DLESE:No</cost>
+		<description>Copyright and Other Restrictions Information is Unknown</description>
+		</rights>
+		</itemRecord>

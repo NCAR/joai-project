@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE form-validation PUBLIC
+          "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.1.3//EN"
+          "http://jakarta.apache.org/commons/dtds/validator_1_1_3.dtd">
+<form-validation>
+<!-- 
+	This file is used to define the validators that are envoked for
+	given fields in the given Struts form bean.
+	
+	Elements and attributes: 	
+		form name = The name of the form that will be validated
+		property = The property (field) that is validated	
+		depends = Validation action that is performed on the property, 
+					as defined in validator-rules.xml
+		key = The resource bundle key to use to display the error message 
+-->
+
+  	<!-- Validation for the matadata directory form (default language formset) -->
+	<formset>             
+		<form name="metadataDirsForm">
+			<field property="dirNickname" depends="required">
+				<msg name="required" key="error.fileDirNickname"/>
+			</field>
+			<field property="dirPath" depends="required,isdirectory,directorynotinrepository">
+				<msg name="required" key="error.fileDirPath"/>
+				<msg name="isdirectory" key="errors.isdirectory"/>
+				<msg name="directorynotinrepository" key="errors.directorynotinrepository"/>
+			</field>
+			<field property="dirMetadataFormat" depends="required">
+				<msg name="required" key="error.fileDirMetadataPrefix"/>
+			</field>			
+		</form>        
+	</formset>
+	
+  	<!-- Validation for the set definition add form (default language formset) -->
+	<formset>             
+		<form name="setDefinitionsForm">
+			<field property="setName" depends="required">
+				<msg name="required" key="error.setName"/>
+			</field>
+			<field property="setSpec" depends="required">
+				<msg name="required" key="error.setSpec"/>
+			</field>			
+		</form>        
+	</formset>
+
+	
+  	<!-- Validation for the repository information (default language formset) -->
+	<formset>             
+		<form name="repositoryInfoForm">
+			<field property="namespaceIdentifier" depends="namespaceidentifier" />		
+			<field property="repositoryName" depends="required">
+				<msg name="required" key="error.repositoryName"/>
+			</field>			
+			<field property="adminEmail" depends="email">
+				<msg name="email" key="error.adminEmail"/>
+			</field>
+			<field property="adminEmail" depends="required">
+				<msg name="required" key="error.empty.adminEmail"/>
+			</field>			
+		</form>        
+	</formset>	
+	
+</form-validation>
+

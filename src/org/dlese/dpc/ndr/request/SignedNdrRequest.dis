@@ -1,0 +1,50 @@
+
+package org.dlese.dpc.ndr.request;
+
+import org.dlese.dpc.ndr.apiproxy.InfoXML;
+import org.dlese.dpc.ndr.connection.NDRConnection;
+
+import org.dlese.dpc.ndr.request.InputXML;
+import org.dlese.dpc.ndr.request.InputXMLComponent;
+import org.dlese.dpc.xml.Dom4jUtils;
+import org.dom4j.*;
+import java.util.*;
+
+/**
+ *  Sends a signed request to NDR for operations requiring authentication  
+	(see http://ndr.comm.nsdl.org/cgi-bin/wiki.pl?APIBasics).
+ *
+ * @author     Jonathan Ostwald
+ * @version    $Id: SignedNdrRequest.dis,v 1.1 2007/07/13 22:18:44 ostwald Exp $
+ */
+public class SignedNdrRequest extends NdrRequest {
+	
+	private static boolean debug = true;
+	
+	public SignedNdrRequest () {
+		super();
+		this.signedRequest = true;
+	};
+	
+	/**
+	 *  Constructor for the SignedNdrRequest object
+	 *
+	 * @param  objectType  NOT YET DOCUMENTED
+	 */
+	public SignedNdrRequest(String verb, String objectType) {
+		super (verb, objectType);
+		this.signedRequest = true;
+	}	
+	
+	/**
+	 *  Description of the Method
+	 *
+	 * @param  s  Description of the Parameter
+	 */
+	private static void prtln(String s) {
+		if (debug) {
+			System.out.println(s);
+		}
+	}
+}
+

@@ -1,0 +1,1044 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+  <!-- ASN SKOS jurisdiction vocabulary-->
+  <!-- ASN jurisdiction description -->
+  <skos:ConceptScheme rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/">
+    <dc:title>ASN Jurisdiction Vocabulary</dc:title>
+    <dc:description>This vocabulary is version 2.0 of the ASN jurisdiction vocabulary.</dc:description>
+    <dc:creator>Stuart A. Sutton</dc:creator>
+    <dcterms:created>2006-11-01</dcterms:created>
+    <dcterms:modified>2010-07-21</dcterms:modified>
+    <!-- Based on ISO 3166-1 Alpha-3 country code and national postal codes -->
+  </skos:ConceptScheme>
+  <!-- ASN Austria -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/AUT">
+    <skos:prefLabel>Austria</skos:prefLabel>
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+  </skos:Concept>
+  <!-- ASN AUSTRALIA (states and territories) -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/AUS">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Australia</skos:prefLabel>
+    <skos:altLabel>AUS</skos:altLabel>
+    <skos:altLabel>AU</skos:altLabel>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/AU-ACT"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/AU-NSW"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/AU-NT"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/AU-QLD"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/AU-SA"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/AU-TAS"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/AU-VIC"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/AU-WA"/>
+  </skos:Concept>
+  <!-- ASN Australian Capital Territory, Australia Definition -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/AU-ACT">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Australian Capital Territory</skos:prefLabel>
+    <skos:altLabel>AB</skos:altLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/AUS"/>
+  </skos:Concept>
+  <!-- ASN New South Wales, Australia Definition -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/AU-NSW">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>New South Wales</skos:prefLabel>
+    <skos:altLabel>NSW</skos:altLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/AUS"/>
+  </skos:Concept>
+  <!-- ASN Northern Territory, Australia Definition -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/AU-NT">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Northern Territory</skos:prefLabel>
+    <skos:altLabel>NT</skos:altLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/AUS"/>
+  </skos:Concept>
+  <!-- ASN Queensland, Australia Definition -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/AU-QLD">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Queensland</skos:prefLabel>
+    <skos:altLabel>QLD</skos:altLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/AUS"/>
+  </skos:Concept>
+  <!-- ASN South Australia, Australia Definition -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/AU-SA">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>South Australia</skos:prefLabel>
+    <skos:altLabel>SA</skos:altLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/AUS"/>
+  </skos:Concept>
+  <!-- ASN Tasmania, Australia Definition -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/AU-TAS">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Tasmania</skos:prefLabel>
+    <skos:altLabel>TAS</skos:altLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/AUS"/>
+  </skos:Concept>
+  <!-- ASN Victoria, Australia Definition -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/AU-VIC">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Victoria</skos:prefLabel>
+    <skos:altLabel>VIC</skos:altLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/AUS"/>
+  </skos:Concept>
+  <!-- ASN Western Australia, Australia Definition -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/AU-WA">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Western Australia</skos:prefLabel>
+    <skos:altLabel>WA</skos:altLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/AUS"/>
+  </skos:Concept>
+  <!-- ASN Belgium -->
+  <!-- Based on ISO 3166-1 Alpha-3 country code and national postal codes -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/BEL">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Belgium</skos:prefLabel>
+  </skos:Concept>
+  <!-- ASN Bosnia and Herzegovina-->
+  <!-- Based on ISO 3166-1 Alpha-3 country code and national postal codes -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/BIH">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Bosnia and Herzegovina</skos:prefLabel>
+  </skos:Concept>
+  <!-- ASN Bulgaria -->
+  <!-- Based on ISO 3166-1 Alpha-3 country code and national postal codes -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/BGR">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Bulgaria</skos:prefLabel>
+  </skos:Concept>
+  <!-- ASN CANADA (provinces and territories) -->
+  <!-- Based on ISO 3166-1 Alpha-3 country codes and Canadian postal codes for provinces and territories -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/CAN">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Canada</skos:prefLabel>
+    <skos:altLabel>CAN</skos:altLabel>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/CAN/AB"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/CAN/BC"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/CAN/MB"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/CAN/NB"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/CAN/NL"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/CAN/NS"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/CAN/NS"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/CAN/NT"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/CAN/NV"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/CAN/AB"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/CAN/ON"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/CAN/PE"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/CAN/QC"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/CAN/SK"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/CAN/UT"/>
+  </skos:Concept>
+  <!-- ASN Alberta, Canada Definition -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/CAN/AB">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Alberta</skos:prefLabel>
+    <skos:altLabel>AB</skos:altLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/CAN"/>
+  </skos:Concept>
+  <!-- ASN British Columbia, Canada Definition -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/CAN/BC">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>British Columbia</skos:prefLabel>
+    <skos:altLabel>BC</skos:altLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/CAN"/>
+  </skos:Concept>
+  <!-- ASN Manitoba, Canada Definition -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/CAN/MB">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Manitoba</skos:prefLabel>
+    <skos:altLabel>MB</skos:altLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/CAN"/>
+  </skos:Concept>
+  <!-- ASN New Brunswick, Canada Definition -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/CAN/NB">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>New Brunswick</skos:prefLabel>
+    <skos:altLabel>NB</skos:altLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/CAN"/>
+  </skos:Concept>
+  <!-- ASN Newfoundland and Labrador, Canada Definition -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/CAN/NL">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Newfoundland and Labrador</skos:prefLabel>
+    <skos:altLabel>NL</skos:altLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/CAN"/>
+  </skos:Concept>
+  <!-- ASN Nova Scotia, Canada Definition -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/CAN/NS">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Nova Scotia</skos:prefLabel>
+    <skos:altLabel>NS</skos:altLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/CAN"/>
+  </skos:Concept>
+  <!-- ASN Northwest Territories, Canada Definition -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/CAN/NT">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Northwest Territories</skos:prefLabel>
+    <skos:altLabel>NT</skos:altLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/CAN"/>
+  </skos:Concept>
+  <!-- ASN Nunavut, Canada Definition -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/CAN/NV">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Nunavut</skos:prefLabel>
+    <skos:altLabel>NV</skos:altLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/CAN"/>
+  </skos:Concept>
+  <!-- ASN Ontario, Canada Definition -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/CAN/ON">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Ontario</skos:prefLabel>
+    <skos:altLabel>ON</skos:altLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/CAN"/>
+  </skos:Concept>
+  <!-- ASN Prince Edward Island, Canada Definition -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/CAN/PE">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Prince Edward Island</skos:prefLabel>
+    <skos:altLabel>PE</skos:altLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/CAN"/>
+  </skos:Concept>
+  <!-- ASN Quebec, Canada Definition -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/CAN/QC">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Quebec</skos:prefLabel>
+    <skos:altLabel>QC</skos:altLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/CAN"/>
+  </skos:Concept>
+  <!-- ASN Saskatchewan, Canada Definition -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/CAN/SK">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Saskatchewan</skos:prefLabel>
+    <skos:altLabel>SK</skos:altLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/CAN"/>
+  </skos:Concept>
+  <!-- ASN Yukon, Canada Definition -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/CAN/YT">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Yukon</skos:prefLabel>
+    <skos:altLabel>YT</skos:altLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/CAN"/>
+  </skos:Concept>
+  <!-- ASN China -->
+  <!-- Based on ISO 3166-1 Alpha-3 country code and national postal codes -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/CHN">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>China</skos:prefLabel>
+    <skos:altLabel>People's Republic of China</skos:altLabel>
+    <skos:altLabel>PRC</skos:altLabel>
+  </skos:Concept>
+  <!-- ASN Croatia -->
+  <!-- Based on ISO 3166-1 Alpha-3 country code and national postal codes -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/HRV">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Croatia</skos:prefLabel>
+    <skos:altLabel>Republic of Croatia</skos:altLabel>
+  </skos:Concept>
+  <!-- ASN Denmark -->
+  <!-- Based on ISO 3166-1 Alpha-3 country code and national postal codes -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/DNK">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Denmark</skos:prefLabel>
+  </skos:Concept>
+  <!-- ASN Estonia -->
+  <!-- Based on ISO 3166-1 Alpha-3 country code and national postal codes -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/EST">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Estonia</skos:prefLabel>
+    <skos:altLabel>Republic of Estonia</skos:altLabel>
+  </skos:Concept>
+  <!-- ASN Finland -->
+  <!-- Based on ISO 3166-1 Alpha-3 country code and national postal codes -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/FIN">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Finland</skos:prefLabel>
+  </skos:Concept>
+  <!-- ASN France -->
+  <!-- Based on ISO 3166-1 Alpha-3 country code and national postal codes -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/FRA">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>France</skos:prefLabel>
+  </skos:Concept>
+  <!-- ASN Germany -->
+  <!-- Based on ISO 3166-1 Alpha-3 country code and national postal codes -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/DEU">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Germany</skos:prefLabel>
+  </skos:Concept>
+  <!-- ASN Gibraltar -->
+  <!-- Based on ISO 3166-1 Alpha-3 country code and national postal codes -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/GIB">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Gibraltar</skos:prefLabel>
+  </skos:Concept>
+  <!-- ASN Greece -->
+  <!-- Based on ISO 3166-1 Alpha-3 country code and national postal codes -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/GRC">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Greece</skos:prefLabel>
+    <skos:altLabel>Hellenic Republic</skos:altLabel>
+    <skos:altLabel>Hellas</skos:altLabel>
+  </skos:Concept>
+  <!-- ASN Greenland -->
+  <!-- Based on ISO 3166-1 Alpha-3 country code and national postal codes -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/GRL">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Greenland</skos:prefLabel>
+  </skos:Concept>
+  <!-- ASN Hong Kong -->
+  <!-- Based on ISO 3166-1 Alpha-3 country code and national postal codes -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/HKG">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Hong Cong</skos:prefLabel>
+  </skos:Concept>
+  <!-- ASN Hungary -->
+  <!-- Based on ISO 3166-1 Alpha-3 country code and national postal codes -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/HUN">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Hungary</skos:prefLabel>
+    <skos:altLabel>Republic of Hungary</skos:altLabel>
+  </skos:Concept>
+  <!-- ASN Iceland -->
+  <!-- Based on ISO 3166-1 Alpha-3 country code and national postal codes -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/ISL">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Iceland</skos:prefLabel>
+  </skos:Concept>
+  <!-- ASN Ireland -->
+  <!-- Based on ISO 3166-1 Alpha-3 country code and national postal codes -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/IRL">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Ireland</skos:prefLabel>
+  </skos:Concept>
+  <!-- ASN Japan -->
+  <!-- Based on ISO ISO 3166-1 Alpha-3 country code -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/JPN">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Japan</skos:prefLabel>
+    <skos:altLabel>JPN</skos:altLabel>
+    <skos:altLabel>JP</skos:altLabel>
+  </skos:Concept>
+  <!-- ASN Lithuania -->
+  <!-- Based on ISO 3166-1 Alpha-3 country code and national postal codes -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/LTU">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Lithuania</skos:prefLabel>
+  </skos:Concept>
+  <!-- ASN Luxembourg -->
+  <!-- Based on ISO 3166-1 Alpha-3 country code and national postal codes -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/LUX">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Luxembourg</skos:prefLabel>
+  </skos:Concept>
+  <!-- ASN Mexico -->
+  <!-- Based on ISO 3166-1 Alpha-3 country code and national postal codes -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/MEX">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Mexico</skos:prefLabel>
+  </skos:Concept>
+  <!-- ASN Netherlands -->
+  <!-- Based on ISO 3166-1 Alpha-3 country code and national postal codes -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/NLD">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Netherlands</skos:prefLabel>
+  </skos:Concept>
+  <!-- ASN Norway -->
+  <!-- Based on ISO 3166-1 Alpha-3 country code and national postal codes -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/NOR">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Norway</skos:prefLabel>
+  </skos:Concept>
+  <!-- ASN Poland -->
+  <!-- Based on ISO 3166-1 Alpha-3 country code and national postal codes -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/POL">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Poland</skos:prefLabel>
+  </skos:Concept>
+  <!-- ASN Portugal -->
+  <!-- Based on ISO 3166-1 Alpha-3 country code and national postal codes -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/PRT">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Portugal</skos:prefLabel>
+  </skos:Concept>
+  <!-- ASN Romania -->
+  <!-- Based on ISO 3166-1 Alpha-3 country code and national postal codes -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/ROU">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Romania</skos:prefLabel>
+  </skos:Concept>
+  <!-- ASN Singapore -->
+  <!-- Based on ISO 3166-1 Alpha-3 country code and national postal codes -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/SGP">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Singapore</skos:prefLabel>
+  </skos:Concept>
+  <!-- ASN Slovakia -->
+  <!-- Based on ISO 3166-1 Alpha-3 country code and national postal codes -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/SVK">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Slovakia</skos:prefLabel>
+  </skos:Concept>
+  <!-- ASN Slovenia -->
+  <!-- Based on ISO 3166-1 Alpha-3 country code and national postal codes -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/SVN">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Slovenia</skos:prefLabel>
+  </skos:Concept>
+  <!-- ASN Spain -->
+  <!-- Based on ISO 3166-1 Alpha-3 country code and national postal codes -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/ESP">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Spain</skos:prefLabel>
+  </skos:Concept>
+  <!-- ASN Sweden -->
+  <!-- Based on ISO 3166-1 Alpha-3 country code and national postal codes -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/SWE">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Sweden</skos:prefLabel>
+  </skos:Concept>
+  <!-- ASN Switzerland -->
+  <!-- Based on ISO 3166-1 Alpha-3 country code and national postal codes -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/CHE">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Switzerland</skos:prefLabel>
+  </skos:Concept>
+  <!-- ASN Taiwan -->
+  <!-- Based on ISO 3166-1 Alpha-3 country code and national postal codes -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/TWN">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Taiwan</skos:prefLabel>
+    <skos:altLabel>Republic of China</skos:altLabel>
+    <skos:altLabel>ROC</skos:altLabel>
+  </skos:Concept>
+  <!-- ASN Turkey -->
+  <!-- Based on ISO 3166-1 Alpha-3 country code and national postal codes -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/TUR">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Turkey</skos:prefLabel>
+  </skos:Concept>
+  <!-- ASN Ukraine -->
+  <!-- Based on ISO 3166-1 Alpha-3 country code and national postal codes -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/UKR">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Ukraine</skos:prefLabel>
+  </skos:Concept>
+  <!-- ASN UNITED KINGDOM -->
+  <!-- Based on ISO ISO 3166-1 Alpha-3 country code -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/GBR">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>United Kingdom</skos:prefLabel>
+    <skos:altLabel>UK</skos:altLabel>
+    <skos:altLabel>GB</skos:altLabel>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/UK/ENGLAND"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/UK/SCOTLAND"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/UK/WALES"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/UK/NORTHERN_IRELAND"/>
+  </skos:Concept>
+  <!-- ASN UNITED KINGDOM - ENGLAND-->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/UK/ENGLAND">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>England</skos:prefLabel>
+  </skos:Concept>
+  <!-- ASN UNITED KINGDOM - SCOTLAND-->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/UK/SCOTLAND">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Scotland</skos:prefLabel>
+  </skos:Concept>
+  <!-- ASN UNITED KINGDOM - Wales-->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/UK/WALES">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Scotland</skos:prefLabel>
+  </skos:Concept>
+  <!-- ASN UNITED KINGDOM - NORTHERN IRELAND-->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/UK/NORTHERN_IRELAND">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Scotland</skos:prefLabel>
+  </skos:Concept>
+  <!-- ASN UNITED STATES (states and possessions) -->
+  <!-- Based on United States postal codes for states and possessions -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/USA">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>U.S. States and Territories</skos:prefLabel>
+    <skos:altLabel>USA</skos:altLabel>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/AL"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/AK"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/AZ"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/AR"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/CA"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/CO"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/CT"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/DE"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/DC"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/FL"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/GA"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/GU"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/HI"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/ID"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/IL"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/IN"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/IA"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/KS"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/KY"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/LA"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/ME"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/MD"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/MA"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/MI"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/MN"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/MS"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/MO"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/MT"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/NE"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/NV"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/NH"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/NJ"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/NM"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/NY"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/NC"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/ND"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/OH"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/OK"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/OR"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/PA"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/PR"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/RI"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/SC"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/SD"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/TN"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/TX"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/UT"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/VT"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/VA"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/VI"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/WA"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/WV"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/WI"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/WY"/>
+  </skos:Concept>
+  <!-- ASN Alabama (State) Definition -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/AL">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Alabama</skos:prefLabel>
+    <skos:altLabel>Ala.</skos:altLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/USA"/>
+  </skos:Concept>
+  <!-- ASN Alaska (State) Definition -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/AK">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Alaska</skos:prefLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/USA"/>
+  </skos:Concept>
+  <!-- ASN American Samoa (Possession) Definition -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/AS">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>American Samoa</skos:prefLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/USA"/>
+  </skos:Concept>
+  <!-- ASN Arizona (State) Definition -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/AZ">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Arizona</skos:prefLabel>
+    <skos:altLabel>Ariz</skos:altLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/USA"/>
+  </skos:Concept>
+  <!-- ASN Arkansas (State) Definition -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/AR">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Arkansas</skos:prefLabel>
+    <skos:altLabel>Ark.</skos:altLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/USA"/>
+  </skos:Concept>
+  <!-- ASN California (State) Definition -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/CA">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>California</skos:prefLabel>
+    <skos:altLabel>Calif.</skos:altLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/USA"/>
+  </skos:Concept>
+  <!-- ASN Colorado (State) Definition -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/CO">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Colorado</skos:prefLabel>
+    <skos:altLabel>Colo.</skos:altLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/USA"/>
+  </skos:Concept>
+  <!-- ASN Connecticut (State) Definition -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/CT">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Connecticut</skos:prefLabel>
+    <skos:altLabel>Conn.</skos:altLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/USA"/>
+  </skos:Concept>
+  <!-- ASN Delaware (State) Definition -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/DE">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Delaware</skos:prefLabel>
+    <skos:altLabel>Del.</skos:altLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/USA"/>
+  </skos:Concept>
+  <!-- ASN District of Columbia  (District) Definition -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/DC">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>District of Columbia</skos:prefLabel>
+    <skos:altLabel>D.C.</skos:altLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/USA"/>
+  </skos:Concept>
+  <!-- ASN Florida (State) Definition -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/FL">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Florida</skos:prefLabel>
+    <skos:altLabel>Fla.</skos:altLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/USA"/>
+  </skos:Concept>
+  <!-- ASN Georgia (State) Definition -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/GA">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Georgia</skos:prefLabel>
+    <skos:altLabel>Ga.</skos:altLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/USA"/>
+  </skos:Concept>
+  <!-- ASN Guam (Territory) Definition -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/GU">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Guam</skos:prefLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/USA"/>
+  </skos:Concept>
+  <!-- ASN Hawaii (State) Definition -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/HI">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Hawaii</skos:prefLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/USA"/>
+  </skos:Concept>
+  <!-- ASN Idaho (State) Definition -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/ID">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Idaho</skos:prefLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/USA"/>
+  </skos:Concept>
+  <!-- ASN Illinois (State) Definition -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/IL">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Illinois</skos:prefLabel>
+    <skos:altLabel>Ill.</skos:altLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/USA"/>
+  </skos:Concept>
+  <!-- ASN Indiana (State) Definition -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/IN">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Indiana</skos:prefLabel>
+    <skos:altLabel>Ind.</skos:altLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/USA"/>
+  </skos:Concept>
+  <!-- ASN Iowa (State) Definition -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/IA">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Iowa</skos:prefLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/USA"/>
+  </skos:Concept>
+  <!-- ASN Kansas (State) Definition -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/KS">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Kansas</skos:prefLabel>
+    <skos:altLabel>Kans.</skos:altLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/USA"/>
+  </skos:Concept>
+  <!-- ASN Kentucky (State) Definition -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/KY">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Kentucky</skos:prefLabel>
+    <skos:altLabel>Ky.</skos:altLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/USA"/>
+  </skos:Concept>
+  <!-- ASN Louisiana (State) Definition -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/LA">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Louisiana</skos:prefLabel>
+    <skos:altLabel>La.</skos:altLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/USA"/>
+  </skos:Concept>
+  <!-- ASN Maine (State) Definition -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/ME">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Maine</skos:prefLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/USA"/>
+  </skos:Concept>
+  <!-- ASN Maryland (State) Definition -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/MD">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Maryland</skos:prefLabel>
+    <skos:altLabel>Md.</skos:altLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/USA"/>
+  </skos:Concept>
+  <!-- ASN Massachusetts (State) Definition -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/MA">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Massachusetts</skos:prefLabel>
+    <skos:altLabel>Mass.</skos:altLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/USA"/>
+  </skos:Concept>
+  <!-- ASN Michigan (State) Definition -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/MI">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Michigan</skos:prefLabel>
+    <skos:altLabel>Mich.</skos:altLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/USA"/>
+  </skos:Concept>
+  <!-- ASN Minnesota (State) Definition -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/MN">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Minnesota</skos:prefLabel>
+    <skos:altLabel>Minn.</skos:altLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/USA"/>
+  </skos:Concept>
+  <!-- ASN Mississippi (State) Definition -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/MS">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Mississippi</skos:prefLabel>
+    <skos:altLabel>Miss.</skos:altLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/USA"/>
+  </skos:Concept>
+  <!-- ASN Missouri (State) Definition -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/MO">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Missouri</skos:prefLabel>
+    <skos:altLabel>Mo.</skos:altLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/USA"/>
+  </skos:Concept>
+  <!-- ASN Montana (State) Definition -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/MT">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Montana</skos:prefLabel>
+    <skos:altLabel>Mont.</skos:altLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/USA"/>
+  </skos:Concept>
+  <!-- ASN Nebraska (State) Definition -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/NE">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Nebraska</skos:prefLabel>
+    <skos:altLabel>Nebr.</skos:altLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/USA"/>
+  </skos:Concept>
+  <!-- ASN New Hampshire (State) Definition -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/NH">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>New Hampshire</skos:prefLabel>
+    <skos:altLabel>N.H.</skos:altLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/USA"/>
+  </skos:Concept>
+  <!-- ASN New Jersey (State) Definition -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/NJ">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>New Jersey</skos:prefLabel>
+    <skos:altLabel>N.J.</skos:altLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/USA"/>
+  </skos:Concept>
+  <!-- ASN New Mexico (State) Definition -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/NM">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>New Mexico</skos:prefLabel>
+    <skos:altLabel>N.M.</skos:altLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/USA"/>
+  </skos:Concept>
+  <!-- ASN New York (State) Definition -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/NY">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>New York</skos:prefLabel>
+    <skos:altLabel>N.Y.</skos:altLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/USA"/>
+  </skos:Concept>
+  <!-- ASN North Carolina (State) Definition -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/NC">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>North Carolina</skos:prefLabel>
+    <skos:altLabel>N.C.</skos:altLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/USA"/>
+  </skos:Concept>
+  <!-- ASN North Dakota (State) Definition -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/ND">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>North Dakota</skos:prefLabel>
+    <skos:altLabel>N.D.</skos:altLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/USA"/>
+  </skos:Concept>
+  <!-- ASN Ohio (State) Definition -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/OH">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Ohio</skos:prefLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/USA"/>
+  </skos:Concept>
+  <!-- ASN Oklahoma (State) Definition -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/OK">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Oklahoma</skos:prefLabel>
+    <skos:altLabel>Okla.</skos:altLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/USA"/>
+  </skos:Concept>
+  <!-- ASN Oregon (State) Definition -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/OR">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Oregon</skos:prefLabel>
+    <skos:altLabel>Ore.</skos:altLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/USA"/>
+  </skos:Concept>
+  <!-- ASN Pennsylvania (State) Definition -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/PA">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Pennsylvania</skos:prefLabel>
+    <skos:altLabel>Pa.</skos:altLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/USA"/>
+  </skos:Concept>
+  <!-- ASN Puerto Rico (Commonwealth) Definition -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/PR">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Puerto Rico</skos:prefLabel>
+    <skos:altLabel>P.R.</skos:altLabel>
+    <skos:altLabel>PRI</skos:altLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/USA"/>
+  </skos:Concept>
+  <!-- ASN Rhode Island (State) Definition -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/RI">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Rhode Island</skos:prefLabel>
+    <skos:altLabel>R.I.</skos:altLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/USA"/>
+  </skos:Concept>
+  <!-- ASN South Carolina (State) Definition -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/SC">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>South Carolina</skos:prefLabel>
+    <skos:altLabel>S.C.</skos:altLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/USA"/>
+  </skos:Concept>
+  <!-- ASN South Dakota (State) Definition -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/SD">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>South Dakota</skos:prefLabel>
+    <skos:altLabel>S.D.</skos:altLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/USA"/>
+  </skos:Concept>
+  <!-- ASN Tennesee (State) Definition -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/TN">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Tennesee</skos:prefLabel>
+    <skos:altLabel>Tenn.</skos:altLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/USA"/>
+  </skos:Concept>
+  <!-- ASN Texas (State) Definition -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/TX">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Texas</skos:prefLabel>
+    <skos:altLabel>Tex.</skos:altLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/USA"/>
+  </skos:Concept>
+  <!-- ASN Utah (State) Definition -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/UT">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Utah</skos:prefLabel>
+    <skos:altLabel>Tex.</skos:altLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/USA"/>
+  </skos:Concept>
+  <!-- ASN Vermont (State) Definition -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/VT">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Vermont</skos:prefLabel>
+    <skos:altLabel>Vt.</skos:altLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/USA"/>
+  </skos:Concept>
+  <!-- ASN Virginia (State) Definition -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/VA">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Virginia</skos:prefLabel>
+    <skos:altLabel>Va.</skos:altLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/USA"/>
+  </skos:Concept>
+  <!-- ASN Virgin Islands (Territory) Definition -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/VI">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Virgin Islands</skos:prefLabel>
+    <skos:altLabel>V.I.</skos:altLabel>
+    <skos:altLabel>VGB</skos:altLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/USA"/>
+  </skos:Concept>
+  <!-- ASN Washington (State) Definition -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/WA">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Washington</skos:prefLabel>
+    <skos:altLabel>Wash.</skos:altLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/USA"/>
+  </skos:Concept>
+  <!-- ASN West Virginia (State) Definition -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/WV">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>West Virginia</skos:prefLabel>
+    <skos:altLabel>W.Va.</skos:altLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/USA"/>
+  </skos:Concept>
+  <!-- ASN Wisconsin (State) Definition -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/WI">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Wisconsin</skos:prefLabel>
+    <skos:altLabel>Wis.</skos:altLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/USA"/>
+  </skos:Concept>
+  <!-- ASN Wyoming (State) Definition -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/WY">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Wyoming</skos:prefLabel>
+    <skos:altLabel>Wyo.</skos:altLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/USA"/>
+  </skos:Concept>
+  <!-- ASN MILITARY Definition -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/Military">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Military</skos:prefLabel>
+  </skos:Concept>
+  <!-- ASN ORGANIZATION Definition -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/Organization">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Organization</skos:prefLabel>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/AAAS"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/ASN"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/CCSS"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/ISLLC"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/NAEP"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/NCEE"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/NCHS"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/NCTE-IRA"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/NCTM"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/NSAE"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/NSES"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/NGES"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/MCREL"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/P21"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/ThinkFinity"/>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/ITEA"/>
+  </skos:Concept>
+  <!-- ASN ORGANIZATION - AAAS -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/AAAS">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>AAAS</skos:prefLabel>
+    <skos:altLabel>American Association for the Advancement of Science</skos:altLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/Organization"/>
+  </skos:Concept>
+  <!-- ASN ORGANIZATION - ASN -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/ASN">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Achievement Standards Network</skos:prefLabel>
+    <skos:altLabel>ASN</skos:altLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/Organization"/>
+  </skos:Concept>
+  <!-- ASN ORGANIZATION - CCSS -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/CCSS">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>CCSS</skos:prefLabel>
+    <skos:altLabel>Common Core State Standards Initiative</skos:altLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/Organization"/>
+  </skos:Concept>
+  <!-- ASN ORGANIZATION - ISLLC -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/ISLLC">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>ISLLC</skos:prefLabel>
+    <skos:altLabel>Interstate School Leaders Licensure Consortium</skos:altLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/Organization"/>
+  </skos:Concept>
+  <!-- ASN ORGANIZATION - NAEP -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/NAEP">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>NAEP</skos:prefLabel>
+    <skos:altLabel>National Assessment of Educational Progress</skos:altLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/Organization"/>
+  </skos:Concept>
+  <!-- ASN ORGANIZATION - NCEE -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/NCEE">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>NCEE</skos:prefLabel>
+    <skos:altLabel>National Council on Economic Education</skos:altLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/Organization"/>
+  </skos:Concept>
+  <!-- ASN ORGANIZATION - NCHS -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/NCHS">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>NCHS</skos:prefLabel>
+    <skos:altLabel>National Center for History in the Schools</skos:altLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/Organization"/>
+  </skos:Concept>
+  <!-- ASN ORGANIZATION - NCTE-IRA -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/NCTE-IRA">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>NCTE-IRA</skos:prefLabel>
+    <skos:altLabel>NCTE/IRA Standards for the English Language Arts</skos:altLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/Organization"/>
+  </skos:Concept>
+  <!-- ASN ORGANIZATION - NCTM -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/NCTM">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>NCTM</skos:prefLabel>
+    <skos:altLabel>National Council of Teachers of Mathematics</skos:altLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/Organization"/>
+  </skos:Concept>
+  <!-- ASN ORGANIZATION - NSAE -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/NSAE">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>NSAE</skos:prefLabel>
+    <skos:altLabel>National Standards for Arts Education</skos:altLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/Organization"/>
+  </skos:Concept>
+  <!-- ASN ORGANIZATION - NSES -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/NSES">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>NSES</skos:prefLabel>
+    <skos:altLabel>National Science Education Standards</skos:altLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/Organization"/>
+  </skos:Concept>
+  <!-- ASN ORGANIZATION - NGES -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/NGES">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>NGES</skos:prefLabel>
+    <skos:altLabel>National Geography Education Standards</skos:altLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/Organization"/>
+  </skos:Concept>
+  <!-- ASN ORGANIZATION - McREL -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/MCREL">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>MCREL</skos:prefLabel>
+    <skos:altLabel>Mid-continent Research for Education and Learning</skos:altLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/Organization"/>
+  </skos:Concept>
+  <!-- ASN ORGANIZATION - P21 -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/P21">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>P21</skos:prefLabel>
+    <skos:altLabel>Partnership for 21st Century Skills</skos:altLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/Organization"/>
+  </skos:Concept>
+  <!-- ASN ORGANIZATION - ThinkFinity -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/ThinkFinity">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>ThinkFinity</skos:prefLabel>
+    <skos:altLabel>ThinkFinity--Verizon Foundation</skos:altLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/Organization"/>
+  </skos:Concept>
+  <!-- ASN ORGANIZATION - International Technology Education Association -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/ITEA">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>International Technology Education Association</skos:prefLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/Organization"/>
+  </skos:Concept>
+  <!-- ASN U.S. FEDERAL GOVERNMENT Definition -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/USFederal">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>U.S. Federal Government</skos:prefLabel>
+    <skos:narrower rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/NCES"/>
+  </skos:Concept>
+  <!-- ASN U.S. FEDERAL GOVERNMENT - NCES-->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/NCES">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>NCES</skos:prefLabel>
+    <skos:altLabel>National Center for Educational Statistics</skos:altLabel>
+    <skos:broader rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/USFederal"/>
+  </skos:Concept>
+  <!-- ASN CORPORATION Definition -->
+  <skos:Concept rdf:about="http://purl.org/ASN/scheme/ASNJurisdiction/Corporation">
+    <skos:inScheme rdf:resource="http://purl.org/ASN/scheme/ASNJurisdiction/"/>
+    <skos:prefLabel>Corporation</skos:prefLabel>
+  </skos:Concept>
+</rdf:RDF>

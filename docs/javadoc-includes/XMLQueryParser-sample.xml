@@ -1,0 +1,29 @@
+<!-- 
+This file contains sample XML for the 
+org.dlese.dpc.index.queryParser.XMLQueryParser class, 
+which parses this XML to produce a Lucene Query.
+This illustrates all supported Query options.
+-->
+<Query>
+	<booleanQuery type="OR">
+		<!-- Require that results match the term 'sea' in the default field -->
+		<textQuery type="matchAnyTerm" field="default" excludeOrRequire="require">sea</textQuery>
+		<!-- Among the results that match 'sea', include results that match any of the following four clauses -->		
+		<textQuery type="matchAllTerms">wave motion</textQuery>
+		<textQuery type="matchAnyTerm" field="title" boost="2.2">wave motion</textQuery>
+		<textQuery type="matchPhrase" field="description">ocean waves</textQuery>
+		<textQuery type="matchKeyword" field="id">123:Module:xyz</textQuery>
+		<!-- Exclude from the results all records that match the following boolean query -->
+		<booleanQuery type="AND" excludeOrRequire="exclude">
+			<luceneQuery>ocean OR atlantic OR pacific</luceneQuery>
+			<textQuery type="matchPhrase" field="stems">arctic ocean</textQuery>
+		</booleanQuery>	
+	</booleanQuery>
+</Query>
+
+<!-- 
+Here's another, simple example:
+<Query>
+	<luceneQuery>sea OR ocean</luceneQuery>
+</Query> 
+-->

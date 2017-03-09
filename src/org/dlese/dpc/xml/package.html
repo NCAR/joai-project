@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+
+<body bgcolor="white">
+
+<p>Contains Interfaces and APIs for working with XML including XML 
+parsing, validation and transformations.</p>
+
+<h3>From Dave Deniman:</h3>
+<p><i>Note: The following information from Dave Deniman pertains to a subset of classes 
+  currently found in this package. These classes are no longer being used.</i></p>
+<p>Provides a simple API for reading XML files and directories. The elements and 
+  attributes of the XML file are hashed as needed to produce an easy mapping between 
+  user-defined names and the desired value or object. This first release requires 
+  a mapping class be constructed to implement the <font face="Arial, Helvetica, sans-serif" size="-1">XMLMap</font> 
+  interface. The mapping is relatively easy to produce and once created makes 
+  accessing values trivial. Any number of mappings can be provided. Work is in 
+  progress to abstract the mapping using an XML metadata-definition file, which 
+  will eliminate the need to manually create mapping classes.</p>
+<p>Two classes, <font face="Arial, Helvetica, sans-serif" size="-1">XMLNode</font> 
+  and <font face="Arial, Helvetica, sans-serif" size="-1">XMLRecord</font>, are 
+  used to abstract the actual XML parsing. JDOM is the parser used for this implementation. 
+  It would not be hard however to implement these two classes as interfaces and 
+  thus allow other parsers to be utilized.</p>
+<p>Two interactive test programs are provided, <font face="Arial, Helvetica, sans-serif" size="-1">TestMapper</font> 
+  and <font face="Arial, Helvetica, sans-serif" size="-1">TestDirectory</font>, 
+  as demos. These prompt for the XML file or directory to map and the type of 
+  mapping to use. Three mappings are provided: DLESE IMS, DLESE Review Status, 
+  and unqualified Dublin Core. Custom mappers can be easily added, but the appropriate 
+  allocation will need to be added to <font face="Arial, Helvetica, sans-serif" size="-1">XMLMapFactory</font>. 
+  (Running <font face="Arial, Helvetica, sans-serif" size="-1">TestDirectory</font> 
+  on a large directory can take several minutes.)</p>
+<p>See <font face="Arial, Helvetica, sans-serif" size="-1">XMLNode</font> for 
+  a description of how the actual mappings are implemented. The &quot;key&quot; 
+  structure needs to be understood when creating a mapping class. The next release 
+  will abstract this using the aforementioned metadata-defintion file.</p>
+<p>This is an early release. A subsequent release will provide XML editing support 
+  as well.</p>
+<p>&nbsp; </p>
+
+<p>
+Provides the classes to abstract XML parsing and to implement the name:value mapping 
+between user-defined names and actual XML. 
+
+<p>
+Implementations generally utilize metadata for defining information in user-relevant 
+terminology. These metadata "objects" can and do consist of XML elements and their 
+attributes, singularly or in combination with other elements/attributes.
+
+<p>
+The mapping interface provided by this package takes advantage of a hashmap implementation
+that provides "keys" to individual elements of an XML DOM. See {@link org.dlese.dpc.xml.XMLNode} method
+
+</body>
+</html>

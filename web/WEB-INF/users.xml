@@ -1,0 +1,15 @@
+<!-- 
+To add user names and passowds for access to the OAI administrative 
+pages, use the following format:
+ 
+ <user name="loginName" password="Password" roles="oai_admin" />
+ 
+Where loginName is the desired login, and Password is the passord.
+
+You can add as many users as necessary. A default user with a login 
+'admin' and password 'admin' is supplied below, which may be removed.
+-->
+
+<tomcat-users>
+    <user name="admin" password="admin" roles="oai_admin" />
+</tomcat-users>

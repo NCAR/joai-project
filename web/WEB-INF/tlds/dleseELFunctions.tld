@@ -1,0 +1,696 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xml-stylesheet type="text/xsl" href="dleseELFunctions.xsl"?>
+<taglib 	xmlns="http://java.sun.com/xml/ns/j2ee" 
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+			xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee web-jsptaglibrary_2_0.xsd" 
+			version="2.0">
+
+	<description>
+		The Expression Language (EL) function library implements functions
+		for use in JSP pages in jOAI.
+	</description>
+	<display-name>EL Function Library</display-name>
+	<tlib-version>1.0</tlib-version>
+	<short-name>f</short-name>
+	<uri>http://www.dlese.org/dpc/dds/tags/dleseELFunctions</uri>
+
+	<function>
+		<description>
+		  Convert XML to JSON.
+		</description>	
+		<name>xml2json</name>
+		<function-class>org.dlese.dpc.xml.XMLUtils</function-class>
+		<function-signature>
+		  java.lang.String xml2json(java.lang.String)
+		</function-signature>
+		<example>
+		  ${f:xml2json(&apos;&lt;root&gt;&lt;text&gt;My text&lt;/text&gt;&lt;/root&gt;&apos;}
+		</example>		
+	</function>
+
+	<function>
+		<description>
+		  Convert dom4j Node that contains JavaBean XML to a JavaBean Object.
+		</description>	
+		<name>dom4j2JavaBean</name>
+		<function-class>org.dlese.dpc.xml.Dom4jUtils</function-class>
+		<function-signature>
+		  java.lang.Object dom4j2JavaBean(org.dom4j.Node)
+		</function-signature>
+		<example>
+			&lt;xtags:variable id=&quot;javaObjectDom&quot; type=&quot;node&quot; select=&quot;$record/metadata/java&quot;/&gt;
+			&lt;c:set var=&quot;myBean&quot; value=&quot;${f:dom4j2JavaBean(javaObjectDom)}&quot;/&gt;
+		</example>		
+	</function>	
+	
+	<function>
+		<description>
+		  Imports the content from a URL as a String, timing out
+		  if the server does not respond in the given number of milliseconds.
+		  An exception is thrown if the time out period is reached.
+		</description>	
+		<name>timedImport</name>
+		<function-class>org.dlese.dpc.util.TimedURLConnection</function-class>
+		<function-signature>
+		  java.lang.String importURL(java.lang.String, int)
+		</function-signature>
+		<example>
+		  ${f:timedImport("http://example.org/remoteResource.xml", 2000)}
+		</example>		
+	</function>	
+	
+	<function>
+		<description>
+		  Imports the content from a URL as a String using the given character encoding, 
+		  timing out if the server does not respond in the given number of milliseconds.
+		  An exception is thrown if the time out period is reached.
+		</description>	
+		<name>timedImportUsingEncoding</name>
+		<function-class>org.dlese.dpc.util.TimedURLConnection</function-class>
+		<function-signature>
+		  java.lang.String importURL(java.lang.String, java.lang.String, int)
+		</function-signature>
+		<example>
+		  ${f:timedImportUsingEncoding("ftp://example.org/remoteResource.xml", "UTF-8", 2000)}
+		</example>			
+	</function>
+
+	<function>
+		<description>
+		  Puts items in a Map, creating a new TreeMap if null is passed in for the myMap argument, otherwise updating the Map with the 
+		  key/value pair. Keys remain sorted sorted lexagraphically.
+		</description>	
+		<name>map</name>
+		<function-class>org.dlese.dpc.util.Utils</function-class>
+		<function-signature>
+		  java.util.Map map(java.util.Map,java.lang.String,java.lang.String)
+		</function-signature>
+		<example>
+		  &lt;c:set var=&quot;myMap&quot; value=&quot;${f:map(myMap,&apos;my key&apos;,&apos;my value&apos;)}&quot; /&gt;
+		</example>		
+	</function>
+
+	<function>
+		<description>
+		  Puts items in a Map, creating a new Map if null is passed in for the myMap argument, otherwise updating the Map with the 
+		  key/value pair. Keys remain sorted by the *values* in the Map. Last argument must be one of 'ascending'or 'descending'.
+		</description>	
+		<name>mapSortByValue</name>
+		<function-class>org.dlese.dpc.util.Utils</function-class>
+		<function-signature>
+		  java.util.Map mapSortByValue(java.util.Map,java.lang.String,java.lang.String,java.lang.String)
+		</function-signature>
+		<example>
+		  &lt;c:set var=&quot;myMap&quot; value=&quot;${f:mapSortByValue(myMap,&apos;my key&apos;,&apos;my value&apos;,true)}&quot; /&gt;
+		</example>		
+	</function>	
+
+	<function>
+		<description>
+		  Create a Map from a Java properties String of the form: property=value (one per line)
+		</description>	
+		<name>propertiesMap</name>
+		<function-class>org.dlese.dpc.util.Utils</function-class>
+		<function-signature>
+		  java.util.Map getPropertiesMap(java.lang.String)
+		</function-signature>
+		<example>
+		  ${cfn:propertiesMap("shortTitle=my title\nlongTitle=my long title")}
+		</example>		
+	</function>
+	
+	<function>
+		<description>
+		  Gets a global system unique ID. This algorithm is reasonably guaranteed to be correct within a single running JVM.
+		</description>	
+		<name>uniqueId</name>
+		<function-class>org.dlese.dpc.util.Utils</function-class>
+		<function-signature>
+		  long getUniqueID()
+		</function-signature>
+		<example>
+		  My unique ID for this JVM run time is: ${f:uniqueId()}
+		</example>		
+	</function>	
+	
+	<function>
+		<description>
+		  Encodes a string for use in a URL using UTF-8.
+		</description>	
+		<name>URLEncoder</name>
+		<function-class>org.dlese.dpc.util.Utils</function-class>
+		<function-signature>
+		  java.lang.String URLEncoder(java.lang.String)
+		</function-signature>
+		<example>
+		  http://someplace.org?code=${f:URLEncoder("code needs url encoding!")}
+		</example>		
+	</function>	
+
+	<function>
+		<description>
+			Encodes a string used in the URL sent to the redirect server
+			and ensures it does not contain problematic characters
+			for the Apache 1 mod_redirect rules (the character sequence %2F 
+			is replaced with /). 
+		</description>	
+		<name>RedirectEncoder</name>
+		<function-class>org.dlese.dpc.util.Utils</function-class>
+		<function-signature>
+			java.lang.String RedirectEncoder(java.lang.String)
+		</function-signature>
+		<example>
+			<![CDATA[
+				http://rd.dlese.org/T=search&Q=${f:RedirectEncoder(param.q)}...
+			]]>
+		</example>		
+	</function>	
+
+	<function>
+		<description>
+			Gets a geospatial Lucene query that will limit search to a given 
+			bounding box and predicate. Predicate values must be one of ['contains','overlaps','within'].
+			Latitude and longitude values must be doubles.
+		</description>	
+		<name>geospatialQuery</name>
+		<function-class>edu.ucsb.adl.LuceneGeospatialQueryConverter</function-class>
+		<function-signature>
+		  org.apache.lucene.search.Query convertQuery(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+		</function-signature>
+		<example>
+		  The geospatial Query is : ${f:geospatialQuery(predicate,northCoord,southCoord,eastCoord,westCoord)}
+		</example>	
+	</function>	
+	
+	
+	<function>
+		<description>
+			Encodes a latitude value to a Lucene searchable String token.
+		</description>	
+		<name>encodeLatitude</name>
+		<function-class>edu.ucsb.adl.LuceneGeospatialQueryConverter</function-class>
+		<function-signature>
+		  java.lang.String encodeLatitude(java.lang.String)
+		</function-signature>
+		<example>
+		  The latitude encoded is : ${f:encodeLatitude(latitudeValue)}
+		</example>	
+	</function>
+	
+	<function>
+		<description>
+			Encodes a longitude value to a Lucene searchable String token.
+		</description>	
+		<name>encodeLongitude</name>
+		<function-class>edu.ucsb.adl.LuceneGeospatialQueryConverter</function-class>
+		<function-signature>
+		  java.lang.String encodeLongitude(java.lang.String)
+		</function-signature>
+		<example>
+		  The longitude encoded is : ${f:encodeLongitude(longitudeValue)}
+		</example>	
+	</function>
+	
+	<function>
+		<description>
+			Stems each of the words or tokens in a given String, returning a String of stemmed
+			tokens with all other characters removed. Token characters include letters and
+			numbers [a-zA-Z0-9], representing the class of tokens that are searchable by Lucene.
+			Note: the tokens "AND" and "OR" (upper case) are left unchanged.
+		</description>	
+		<name>stem</name>
+		<function-class>org.dlese.dpc.index.Stemmer</function-class>
+		<function-signature>
+		  java.lang.String stemWordsInString(java.lang.String)
+		</function-signature>
+		<example>
+		  The stems for 'oceanic seas watering' are: ${f:stem("oceanic seas watering")}
+		</example>	
+	</function>	
+
+	<function>
+		<description>
+		  Stems each of the words in a given Lucene query String, returning the same String with the word
+		  parts in stemmed form. All other characters are left in tact, 
+		  and words that may be found in a Lucene query are unchanged such as 'AND', 'OR' and field specificers such 
+		  as 'titles:'.
+		</description>	
+		<name>stemClause</name>
+		<function-class>org.dlese.dpc.index.Stemmer</function-class>
+		<function-signature>
+		  java.lang.String stemWordsInLuceneClause(java.lang.String)
+		</function-signature>
+		<example>
+		  The stemmed query for 'titles:(oceanic seas watering)' is: ${f:stemClause("titles:(oceanic seas watering)")}
+		</example>		
+	</function>		
+	
+	<function>
+		<description>
+		  Returns true if the given word is an english stop word.
+		</description>	
+		<name>isStopWord</name>
+		<function-class>org.dlese.dpc.index.LuceneStopWords</function-class>
+		<function-signature>
+		  boolean isStopWord(java.lang.String)
+		</function-signature>
+		<example>
+			<![CDATA[ 
+			<c:if test="${f:isStopWord('and')}">
+				and is a stop word!
+			</c:if>
+			]]>
+		</example>			
+	</function>	
+
+	<function>
+		<description>
+		  Tells whether or not the first String matches the regular expression
+		  supplied in the second String.
+		</description>	
+		<name>matches</name>
+		<function-class>org.dlese.dpc.util.Utils</function-class>
+		<function-signature>
+		  boolean matches(java.lang.String, java.lang.String)
+		</function-signature>
+		<example>
+			<![CDATA[ 
+			<c:when test='${f:matches( param.q, ".*[:^()].*" )}'>
+				param.q contains a lucene query!
+			</c:if>
+			]]>
+		</example>			
+	</function>	
+	
+	<function>
+		<description>
+		  Replaces each substring of the first String that matches the regular expression 
+		  supplied in the second String with the replacement supplied in the third string.
+		</description>	
+		<name>replaceAll</name>
+		<function-class>org.dlese.dpc.util.Utils</function-class>
+		<function-signature>
+		  java.lang.String replaceAll(java.lang.String, java.lang.String, java.lang.String)
+		</function-signature>
+		<example>
+		  ${f:replaceAll("The cat ran to the cat store", "cat", "dog")}
+		</example>		
+	</function>	
+
+	<function>
+		<description>
+		  Replaces the first substring of the first String that matches the regular expression 
+		  supplied in the second String with the replacement supplied in the third string.
+		</description>	
+		<name>replaceFirst</name>
+		<function-class>org.dlese.dpc.util.Utils</function-class>
+		<function-signature>
+		  java.lang.String replaceFirst(java.lang.String, java.lang.String, java.lang.String)
+		</function-signature>
+		<example>
+		  ${f:replaceFirst("The cat ran to the cat store", "cat", "dog")}
+		</example>		
+	</function>		
+
+	<function>
+		<description>
+		  Splits the first string around matches of the regular expression supplied in the second String.
+		</description>	
+		<name>splitRegEx</name>
+		<function-class>org.dlese.dpc.util.Utils</function-class>
+		<function-signature>
+		  java.lang.String[] split(java.lang.String, java.lang.String)
+		</function-signature>
+		<example>
+			<![CDATA[ 
+				<c:set var="tokens" value="${f:splitRegEx('token1 token2','\\s+')}'></c:set>
+			]]>
+		</example>			
+	</function>	
+	
+	<function>
+		<description>
+			Returns true if the object in the first parameter contains the Object in the second parameter according
+			to the Objects equals method. The first parameter can be an Array, Collection (List, Set, etc.), Map or
+			String. If the Object in the first parameter is a String, returns true if the Object in the second
+			parameter is a subString of the first. If the Object in the first parameter is a Map, returns true if one
+			of it's keys is equal to the Object in the second parameter. 
+		  
+		    This is a more versitile version of the regular JSTL contains function.
+		</description>	
+		<name>contains</name>
+		<function-class>org.dlese.dpc.util.Utils</function-class>
+		<function-signature>
+		  boolean contains(java.lang.Object, java.lang.Object)
+		</function-signature>
+		<example>
+			<![CDATA[ 
+				<c:if test="${f:contains(paramValues.relation,'isAnnotatedBy')">
+					One or more 'relation' parameters contains the value 'isAnnotatedBy'!
+				</c:if>
+			]]>
+		</example>			
+	</function>		
+
+	<function>
+		<description>
+		  Encodes a String such that it is guaranteed to be valid inside JavaScript quotes.
+		</description>	
+		<name>jsEncode</name>
+		<function-class>org.dlese.dpc.util.HTMLTools</function-class>
+		<function-signature>
+		  java.lang.String javaScriptEncodeToStr(java.lang.String)
+		</function-signature>	
+		<example>
+			JavaScript:alert('${f:jsEncode(param.q)}');
+		</example>
+	</function>		
+
+	<function>
+		<description>
+		  Gets the DPC error message associated with a given error code (Integer).
+		</description>	
+		<name>DPCErrorMsg</name>
+		<function-class>org.dlese.dpc.util.DpcErrors</function-class>
+		<function-signature>
+		  java.lang.String getMessage(int)
+		</function-signature>	
+		<example>
+			The error message was: ${f:DPCErrorMsg('410010')}.
+		</example>
+	</function>	
+
+	<function>
+		<description>
+		  Gets the DPC error code associated with a given error message String.
+		</description>	
+		<name>DPCErrorCode</name>
+		<function-class>org.dlese.dpc.util.DpcErrors</function-class>
+		<function-signature>
+		  int getType(java.lang.String)
+		</function-signature>	
+		<example>
+			The error code was: ${f:DPCErrorMsg('Duplicate ID')}.
+		</example>
+	</function>	
+
+	<function>
+		<description>
+			Encodes a String to an appropriate format as a single Lucene term for searching, 
+			including whate space.
+		</description>	
+		<name>encodeToTerm</name>
+		<function-class>org.dlese.dpc.index.SimpleLuceneIndex</function-class>
+		<function-signature>
+		  String encodeToTerm(java.lang.String)
+		</function-signature>	
+		<example>
+			The search query term is: ${f:encodeToTerm('this is all one term!')}.
+		</example>
+	</function>		
+	
+	<function>
+		<description>
+	 		Escapes all Lucene QueryParser reserved characters with a preceeding \. The resulting
+			String will be interpereted by the QueryParser as a single term.
+		</description>	
+		<name>escape</name>
+		<function-class>org.dlese.dpc.index.SimpleLuceneIndex</function-class>
+		<function-signature>
+		  String escape(java.lang.String)
+		</function-signature>	
+		<example>
+			The search query term is: ${f:escapeTerm('http://www.dlese.org/')}.
+		</example>
+	</function>	
+
+	<function>
+		<description>
+	 		Escapes all Lucene QueryParser reserved characters with a preceeding \
+			except the ones indicated in the second parameter
+		</description>	
+		<name>escapeAllExcept</name>
+		<function-class>org.dlese.dpc.index.SimpleLuceneIndex</function-class>
+		<function-signature>
+		  String escape(java.lang.String, java.lang.String)
+		</function-signature>	
+		<example>
+			The search query term is: ${f:escapeAllExcept('http://www.dlese.org*','*')}.
+		</example>
+	</function>
+
+	<function>
+		<description>
+		  Converts a date String of the form YYYY-mm-dd, YYYY-mm, YYYY or yyyy-MM-ddTHH:mm:ssZ 
+		  to a searchable Lucene (v2.x) lexical date String of the form 'yyyyMMddHHmmss', or null if unable 
+		  to parse the date String.
+		</description>	
+		<name>lexicalDate</name>
+		<function-class>org.dlese.dpc.util.Utils</function-class>
+		<function-signature>
+		  java.lang.String getLexicalDateString(java.lang.String)
+		</function-signature>	
+		<example>
+			The search query is: wndate:[${f:lexicalDate('2004-09-15')} TO ${f:lexicalDate('2004-12-15')}]
+		</example>
+	</function>	
+	
+	<function>
+		<description>
+		  Converts a lexical Lucene date String of the form '0cq0gyn40' into a Java Date Object. If the String
+		  can not be converted, returns null.
+		</description>	
+		<name>luceneDate</name>
+		<function-class>org.dlese.dpc.util.Utils</function-class>
+		<function-signature>
+		  java.util.Date luceneStringToDate(java.lang.String)
+		</function-signature>	
+		<example>
+			The item was new on: ${f:luceneDate(result.docMap['wndate'])}.
+		</example>
+	</function>	
+
+	<function>
+		<description>
+		  Converts a long that contains milliseconds to a Date.
+		</description>	
+		<name>convertLongToDate</name>
+		<function-class>org.dlese.dpc.util.Utils</function-class>
+		<function-signature>
+		  java.util.Date convertLongToDate(long)
+		</function-signature>	
+		<example>
+			The date was: ${f:convertLongToDate( myDateInMilliSeconds )}.
+		</example>
+	</function>		
+
+	
+	<function>
+		<description>
+		  Converts a Date Object to a ISO8601 UTC datestamp String of the form yyyy-MM-ddTHH:mm:ssZ in the UTC timezone.
+		</description>	
+		<name>dateToUtcDatestamp</name>
+		<function-class>org.dlese.dpc.oai.OAIUtils</function-class>
+		<function-signature>
+		  java.lang.String getDatestampFromDate(java.util.Date)
+		</function-signature>	
+		<example>
+			The OAI UTC datestampe is: ${f:dateToUtcDatestamp( myDate )}.
+		</example>
+	</function>
+	
+	<function>
+		<description>
+		  Converts a ISO8601 UTC datestamp String of the form yyyy-MM-ddTHH:mm:ssZ or yyyy-MM-dd in the UTC timezone
+		  to a Date Object.
+		</description>	
+		<name>utcDatestampToDate</name>
+		<function-class>org.dlese.dpc.oai.OAIUtils</function-class>
+		<function-signature>
+		   java.util.Date getDateFromDatestamp(java.lang.String)
+		</function-signature>	
+		<example>
+			<![CDATA[ 
+				<c:set var="myDate" value="${f:utcDatestampToDate( utcDatestampString )}"/>
+			]]>			
+		</example>
+	</function>		
+	
+	<function>
+		<description>
+		  Generates an XML String representation of a dom4j Node, Element, Document, Branch, etc.
+		</description>	
+		<name>dom4jToXml</name>
+		<function-class>org.dlese.dpc.xml.Dom4jUtils</function-class>
+		<function-signature>
+		  java.lang.String prettyPrint(org.dom4j.Node)
+		</function-signature>	
+		<example>
+			<![CDATA[ 
+				The XML for this Node is <c:out value="${f:dom4jToXml(myNode)}" escapeXml="true"/>
+			]]>
+		</example>
+	</function>
+
+	<function>
+		<description>
+		  Localizes a Dom4j Document by removing all namespaces from it, for 
+		  use with the xtags library.
+		  With namespaces removed, the XPath syntax necessary to work with the 
+		  document is greatly simplified.
+		</description>	
+		<name>localizeDom4j</name>
+		<function-class>org.dlese.dpc.xml.Dom4jUtils</function-class>
+		<function-signature>
+		  org.dom4j.Document localizeXml(org.dom4j.Document)
+		</function-signature>	
+		<example>
+			<![CDATA[ 
+				<c:set var="myLocalizedDocument" value="${f:localizeDom4j(myNamespaceAwareDocument)}"/>
+			]]>
+		</example>
+	</function>		
+	
+	<function>
+		<description>
+		  Gets an XSL style sheet that removes all namespaces from an XML document.
+		  With namespaces removed, the XPath syntax necessary to work with the 
+		  document is greatly simplified.
+		</description>	
+		<name>removeNamespacesXsl</name>
+		<function-class>org.dlese.dpc.xml.XSLUtils</function-class>
+		<function-signature>
+		  java.lang.String getRemoveNamespacesXSL()
+		</function-signature>	
+		<example>
+			<![CDATA[ 
+			<x:transform xslt="${f:removeNamespacesXsl()}" xml="${xmlOutput}" var="myDom"/>
+			]]>
+		</example>
+	</function>
+	
+	<function>
+		<description>
+		  Reconstructs the URL the client used to make the request, even if the page has been forwarded for example via struts (action.do). 
+		  The returned URL contains a protocol, server name, port number, 
+		  and server path, but it does not include query string parameters.
+		</description>	
+		<name>requestURL</name>
+		<function-class>org.dlese.dpc.webapps.tools.GeneralServletTools</function-class>
+		<function-signature>
+		  java.lang.StringBuffer getRequestURL(javax.servlet.http.HttpServletRequest)
+		</function-signature>	
+		<example>
+			The requested URL for this page is: ${f:requestURL(pageContext.request)}.
+		</example>
+	</function>		
+
+	<function>
+		<description>
+		  Returns the part of this request's URL from the protocol name up to the query string in the first line of the HTTP request. 
+		  Works properly, even if the page has been forwarded for example via struts (action.do).
+		</description>	
+		<name>requestURI</name>
+		<function-class>org.dlese.dpc.webapps.tools.GeneralServletTools</function-class>
+		<function-signature>
+		  java.lang.String getRequestURI(javax.servlet.http.HttpServletRequest)
+		</function-signature>	
+		<example>
+			The requested URI for this page is: ${f:requestURI(pageContext.request)}.
+		</example>
+	</function>	
+
+	
+	<function>
+		<description>
+		  Gets the absolute URL to the current server, for example
+		  &apos;http://www.dlese.org&apos; or &apos;http://tremor.dpc.ucar.edu:9187&apos;
+		</description>	
+		<name>serverUrl</name>
+		<function-class>org.dlese.dpc.webapps.tools.GeneralServletTools</function-class>
+		<function-signature>
+		  java.lang.String getServerUrl(javax.servlet.http.HttpServletRequest)
+		</function-signature>	
+		<example>
+			The URL to the page is: ${f:serverUrl(pageContext.request)}/context/pages/index.jsp.
+		</example>
+	</function>		
+	
+	<function>
+		<description>
+		  Gets the absolute URL to the current servlet context, for example
+		  &apos;http://www.dlese.org/dds&apos; or &apos;http://tremor.dpc.ucar.edu:9187/news_opps&apos;
+		</description>	
+		<name>contextUrl</name>
+		<function-class>org.dlese.dpc.webapps.tools.GeneralServletTools</function-class>
+		<function-signature>
+		  java.lang.String getContextUrl(javax.servlet.http.HttpServletRequest)
+		</function-signature>	
+		<example>
+			The URL to the page is: ${f:contextUrl(pageContext.request)}/pages/index.jsp.
+		</example>
+	</function>	
+
+	<function>
+		<description>
+		  Writes a file to the local file system using UTF-8 encoding. 
+		  The first argument contains the content
+		  to be written, the second argument is the full file path.
+		  For security, file paths should be hard-coded into JSP
+		  pages. If user input is needed, carefully 
+		  validate and scrub the input prior to writing to the given path.
+		</description>	
+		<name>writeFile</name>
+		<function-class>org.dlese.dpc.util.Files</function-class>
+		<function-signature>
+		  void writeFile(java.lang.String,java.lang.String)
+		</function-signature>
+		<example>
+			${f:writeFile('Here is some content','/home/my_user_home/files/my_document.txt')}
+		</example>		
+	</function>	
+	
+	<function>
+		<description>
+		  Ouputs text to the System.out print stream.
+		</description>	
+		<name>systemOut</name>
+		<function-class>org.dlese.dpc.util.Utils</function-class>
+		<function-signature>
+		  void printToSystemOut(java.lang.String)
+		</function-signature>
+		<example>
+			${f:systemOut( 'The debug param is:' )} ${f:systemOut( param.debug )}
+		</example>		
+	</function>	
+
+	<function>
+		<description>
+		  Ouputs text to the System.err print stream.
+		</description>	
+		<name>systemErr</name>
+		<function-class>org.dlese.dpc.util.Utils</function-class>
+		<function-signature>
+		  void printToSystemErr(java.lang.String)
+		</function-signature>
+		<example>
+			${f:systemErr( 'The debug param is:' )} ${f:systemOut( param.debug )}
+		</example>			
+	</function>	
+
+	<function>
+		<description>
+		  Ouputs the name of the object's class to standard out and returns as a String.
+		</description>	
+		<name>objectInspector</name>
+		<function-class>org.dlese.dpc.util.Utils</function-class>
+		<function-signature>
+		  java.lang.String ObjectInspector(java.lang.Object)
+		</function-signature>
+		<example>
+			The object is of type: ${f:objectInspector( myObject )}
+		</example>				
+	</function>		
+	
+</taglib>
+

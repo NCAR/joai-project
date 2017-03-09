@@ -1,0 +1,47 @@
+<!-- 
+This file contains sample XML that is written by the 
+org.dlese.dpc.repository.action.RepositoryAdminAction class 
+and read by org.dlese.dpc.repository.RepositoryManager
+to configure OAI sets.
+
+Also used in the OAI ListSets.jsp page
+-->
+<ListSets>
+	<set>
+		<setSpec>testSpec</setSpec>
+		<setName>Set title/name goes here</setName>
+		<setDescription>
+			<description>This is a set in an OAI repsoitory. The description goes here
+			and will be inserted into an oai_dc description</description>
+			<identifier>http://sample.inst.org/optional_set_info.html</identifier>		
+		</setDescription>
+		<!-- The <virtualSearchField> element configures the search mapping for this set -->
+		<virtualSearchField field="setSpec">
+			<virtualSearchTermDefinition term="testSpec">
+				<Query>
+					<booleanQuery type="OR">
+						<textQuery type="matchKeyword" field="docdir">/dpc/tremor/devel/jweather/records/records_adn_v0.7.00_UTF-8_tests/adn/dcc</textQuery> 
+						<textQuery type="matchKeyword" field="docdir">/dpc/tremor/devel/jweather/records/records_adn_v0.7.00_UTF-8_tests/adn/comet</textQuery> 
+						<booleanQuery type="AND">
+							<textQuery type="matchAnyTerm">ocean,sea,water</textQuery>
+							<textQuery type="matchAnyTerm">pacific</textQuery>
+						</booleanQuery>
+					</booleanQuery>
+				</Query>
+			</virtualSearchTermDefinition>
+		</virtualSearchField>
+	</set>
+
+	<set>
+		<setSpec>testSpec2</setSpec>
+		<setName>Set title/name goes here22</setName>
+		<!-- The <virtualSearchField> element configures the search mapping for this set -->
+		<virtualSearchField field="setSpec">
+			<virtualSearchTermDefinition term="testSpec2">
+				<Query>
+					<luceneQuery>stems:colorado</luceneQuery>
+				</Query>
+			</virtualSearchTermDefinition>
+		</virtualSearchField>
+	</set>	
+</ListSets>

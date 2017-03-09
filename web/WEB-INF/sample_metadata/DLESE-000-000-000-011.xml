@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itemRecord xmlns="http://adn.dlese.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://adn.dlese.org http://www.dlese.org/Metadata/adn-item/0.6.50/record.xsd">
+		<general>
+		<title>This Dynamic Earth: the Story of Plate Tectonics</title>
+		<description>This booklet gives a brief introduction to the concept of plate tectonics and complements the visual and written information in the map entitled This Dynamic Planet, which was published in 1994 by the U.S. Geological Survey (USGS) and the Smithsonian Institution. The booklet highlights some of the people and discoveries that advanced the development of the theory and traces its progress since its proposal. Although the general idea of plate tectonics is now widely accepted, many aspects still continue to confound and challenge scientists. Chapter headings include; Historical perspective, Developing the theory, Understanding plate motions, "Hotspots": Mantle thermal plumes, Some unanswered questions, and Plate tectonics and people.</description>
+		<language>en</language>
+		<subjects>
+		<subject>DLESE:Geology</subject>
+		</subjects>
+		</general>
+		<lifecycle>
+		<version>1.07</version>
+		<contributors>
+		<contributor role="Publisher" date="2000-03-28">
+		<organization>
+		<instName>United States Geological Survey (USGS), USGS Information Services</instName>
+		</organization>
+		</contributor>
+		</contributors>
+		</lifecycle>
+		<metaMetadata>
+		<catalogEntries>
+		<catalog entry="DLESE-000-000-000-011">DLESE Program Center Catalog Record Number</catalog>
+		</catalogEntries>
+		<dateInfo created="2000-11-15" accessioned="2000-11-15"/>
+		<statusOf status="Accessioned"/>
+		<language>en</language>
+		<scheme>ADN (ADEPT/DLESE/NASA Alexandria Digital Earth Prototype/Digital Library for Earth System Education/National Aeronautics and Space Administration)</scheme>
+		<copyright>Copyright (c) 2002 UCAR (University Corporation for Atmospheric Research)</copyright>
+		<termsOfUse URI="http://www.dlese.org/documents/policy/terms_use_full.html">Terms of use consistent with DLESE (Digital Library for Earth System Education) policy.</termsOfUse>
+		
+		</metaMetadata>
+		<technical>
+		<online>
+		<primaryURL>http://pubs.usgs.gov/publications/text/dynamic.html</primaryURL>
+		<mediums>
+		<medium>text/html</medium>
+		</mediums>
+		<requirements>
+		<requirement>
+		<reqType>DLESE:General:No specific technical requirements</reqType>
+		</requirement>
+		</requirements>
+		</online>
+		</technical>
+		<educational>
+		<audiences>
+		<audience>
+		<gradeRange>DLESE:Middle school</gradeRange>
+		</audience>
+		<audience>
+		<gradeRange>DLESE:High school</gradeRange>
+		</audience>
+		<audience>
+		<gradeRange>DLESE:Undergraduate lower division</gradeRange>
+		</audience>
+		</audiences>
+		<resourceTypes>
+		<resourceType>DLESE:Text:Book</resourceType>
+		</resourceTypes>
+		
+		</educational>
+		<rights>
+		<cost>DLESE:No</cost>
+		<description>Copyright and Other Restrictions Information is Unknown.</description>
+		</rights>
+		</itemRecord>

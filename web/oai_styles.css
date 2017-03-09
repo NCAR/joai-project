@@ -1,0 +1,534 @@
+/* The A tag */
+A { 
+	text-decoration: underline; 
+} 
+
+A:link { 
+	Font-Family: Arial, Helvetica, sans-serif;
+	Color: #3f4c02 
+} 
+
+A:active {
+	Color: #3f4c02;
+	text-decoration: none;
+} 
+
+A:visited { 
+	Color: #3f4c02;
+	text-decoration: underline; 
+} 
+
+
+/* A pseudo class 'boldlink' for the A tag */
+A.boldlink:link, A.boldlink:hover, A.boldlink:visited, A.boldlink:active {
+	text-decoration: none; 
+	font-weight: bold;
+}
+
+/* A pseudo class 'boldlink' for the A tag */
+A.boldlink:hover {
+	text-decoration: underline; 
+}
+
+.admin_blue1 {
+	background: #e3e4f1;		
+}
+
+
+.inlineForm {
+	display: inline;
+	padding: 0px;
+	margin: 0px;
+	border: 0px;	
+}
+
+/* Buttons, etc., can be <input> or <div> */
+.smallButton {
+	font-size:11px;
+	color: #000;
+	padding:2px;
+	border:solid 1px;
+	border-color:#777;
+	cursor:pointer;
+	text-align:center;
+	background-image:url(images/nav_gradient2.gif);
+	background-repeat:repeat-x;	
+}
+
+.MenuText { 
+
+font-family: Arial, Helvetica, sans-serif; 
+
+font-size: 12px; 
+
+text-decoration:none; 
+
+} 
+
+
+
+.MenuTopText { 
+
+font-family: Arial, Helvetica, sans-serif; 
+
+font-weight: bold; 
+
+font-size: 12px; 
+
+text-decoration: none; 
+
+} 
+
+
+
+.MenuPos { 
+
+position: absolute; 
+
+top: 40px; 
+
+left: 0px; 
+
+z-index: 2; 
+
+visibility: hidden; 
+
+} 
+
+.LogoPos {
+position: absolute;
+top: 4px;
+left: 6px;
+}
+
+.NSOffset { 
+
+position: relative; 
+
+top: 2px; 
+
+left: 0px; 
+
+padding: 0px; 
+
+margin: 0px; 
+
+} 
+
+
+
+.MenuEntry { 
+
+position: relative; 
+
+z-index: 0; 
+
+left: 0px; 
+
+padding: 0px; 
+
+margin: 0px; 
+
+} 
+
+.reportDiv {
+	padding:6px;
+}
+.menuLnk {
+	padding:1px;
+}
+
+.content { 
+
+position: absolute; 
+
+left: 170px; 
+
+top: 50px; 
+
+font-family: Arial, Helvetica, sans-serif; 
+
+background-color: #ffffff; 
+
+padding-left: 8px; 
+
+padding-right: 4px; 
+
+padding-bottom: 4px; 
+
+padding-top: 4px; 
+
+margin-top: 0px; 
+
+margin-left: 0px; 
+
+border: 2px ridge #FDE6B9; 
+
+} 
+
+
+
+.selectArial {
+
+font-family: Arial, Helvetica, sans-serif; 
+
+font-size: 10pt;
+
+}
+
+
+/*comment*/ 
+
+body {
+
+	margin: 0px;
+	background-color: #FFFDFA;
+	color : #06185A; 
+	/*background-image : url(images/bg.jpg);
+  background-repeat: repeat-y;
+*/
+
+} 
+
+
+
+H1 { 
+
+Font-Family : Arial, Helvetica, sans-serif ; 
+
+Font-Size : 14pt ;
+
+Color : #76310E ; 
+
+} 
+
+
+
+H2 { 
+
+Font-Family : Arial, Helvetica, sans-serif ; 
+
+Font-Size : 12pt ; 
+
+Font-Style : Italic ; 
+
+Color : #76310E; 
+
+} 
+
+
+
+H3 { 
+
+Font-Family : Arial, Helvetica, sans-serif ; 
+
+Font-Size : 12pt ; 
+
+Font-weight : bold ; 
+
+Color : #76310E; 
+
+} 
+
+h5 { 
+
+Font-Family : Arial, Helvetica, sans-serif;  ; 
+
+Font-Size : 9pt ;
+
+Font-weight : normal ; 
+
+Color : #76310E ; 
+
+} 
+
+
+
+H6 { 
+
+Font-Family : Arial, Helvetica, sans-serif;  ; 
+
+Font-Size : 8pt ;
+
+Font-weight : normal ; 
+
+Color : #76310E ; 
+
+} 
+
+CODE, .code {
+	font-family: "Courier New", Courier, mono; 
+}
+
+
+
+.titletext {  
+
+	font-family: Arial, Helvetica, sans-serif; 
+
+	font-size: 16pt; 
+
+	font-style: normal; 
+
+	font-weight: bold; 
+
+	color: #006666
+
+}
+
+
+
+.subtitle  {
+
+	Font-Family : Arial, Helvetica, sans-serif ;
+
+	Font-Size : 12pt ;
+
+	Font-Style : Italic ;
+
+	Color : #006666 ;
+
+	font-weight: bold ;
+
+}
+
+
+
+p { 
+
+List-Style-Type : Decimal ; 
+
+Font-Family : Arial, Helvetica, sans-serif; ; 
+
+Font-Size : 10pt; 
+
+Color : #06185A ; 
+
+} 
+
+
+
+TD { 
+
+font-family: Arial, Helvetica, sans-serif; 
+
+font-size: 10pt; 
+
+} 
+
+
+OL { 
+
+List-Style-Type : Decimal ; 
+
+Font-Family : Arial, Helvetica, sans-serif; ; 
+
+Font-Size : 10pt ; 
+
+Color : #06185A 
+
+} 
+
+
+
+UL { 
+
+List-Style-Type : Disc ; 
+
+Font-Family : Arial, Helvetica, sans-serif; ; 
+
+Font-Size : 10pt 
+
+} 
+
+
+
+LI { 
+
+Font-Family : Arial, Helvetica, sans-serif; ; 
+
+Font-Size : 10pt ; 
+
+Color : #06185A 
+
+} 
+
+
+.sbox { 
+
+font-weight: normal; 
+
+text-decoration: none; 
+
+font-size: 11px; 
+
+position: relative; 
+
+left: 8px; 
+
+top: 0px; 
+
+padding-top: 0px; 
+
+margin-top: 0px;	
+
+} 
+
+
+
+.emailInclude { 
+
+font-family: Arial, Helvetica, sans-serif; 
+
+font-weight: normal; 
+
+font-size: 8pt; 
+
+} 
+
+
+
+.helpEtc { 
+
+font-family: Arial, Helvetica, sans-serif; 
+
+font-weight: bold; 
+
+text-decoration: none; 
+
+font-size: 12px; 
+
+} 
+
+
+
+.disclaimer  {
+	margin-left: 1px;
+	font-family: Arial, Helvetica, sans-serif;
+
+
+
+	font-size: 10px; 
+
+} 
+
+.searchForm { 
+
+padding-top: 0px; 
+
+margin-top: 0px; 
+
+top: 0px; 
+
+} 
+
+
+
+.footermenu { 
+
+font-family: Arial, Helvetica, sans-serif; 
+
+font-size: 12px; 
+
+} 
+
+
+
+.caption {  font-family: Arial, Helvetica, sans-serif; font-size: x-small}
+
+.dlese_footer {
+	width: 100%;
+	text-align: center;
+	text-decoration: none;
+	font-family: arial, helvetica, sans-serif; 
+	position: relative;
+	display: block;
+}
+
+
+
+.backgroundLine {
+      background-image : url(images/repeat.jpg);
+      background-repeat : repeat-x;
+      height : 54px;
+   }
+
+   .backgroundLinePopUp {
+      background-image : url(images/bannerPopUpSlice.jpg);
+      background-repeat : repeat-x;
+      height : 43px;
+   }
+
+   
+.hiddentext{
+    visibility: hidden; 
+   }
+
+
+
+#menu{
+background-color : #A8B955;
+vertical-align: top;
+}
+
+
+#formrow {
+  background-color: #f5de98;	
+}
+
+#headrow{
+  font-weight:bold;
+  background-color: #6C7640;
+  vertical-align: middle;
+  color: #FBFDF2;
+}
+
+
+#headrow a:link {
+     color: #FBFDF2;
+     text-decoration: none;
+}
+
+#headrow A:active {
+	Color: #FBFDF2;
+	text-decoration: none;
+} 
+
+#headrow A:visited { 
+	Color: #FBFDF2;
+	text-decoration: none;
+}
+
+#bottom{
+
+left:30%;
+  background-image : url(images/joaifooter.gif);
+position: absolute;
+}
+
+table#form {
+    background-color:#000000;
+    border: 0;
+}
+
+#editrow{
+	 background-color: #f3d98d;
+  vertical-align: middle;
+
+	
+}
+
+a.helpp:link {
+		text-decoration: none; 
+}
+
+a.helpp:active {
+	
+	text-decoration: none;
+} 
+
+a.helpp:visited { 
+	text-decoration: none;
+} 
+
+

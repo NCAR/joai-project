@@ -1,0 +1,45 @@
+<productReleases>
+	<!-- 
+		This configuration file is used to generate a page with information and liks for jOAI
+		downloads. The JSP page that does the rendering is in the services area of the
+		dds-project (/services/joai_software.jsp).
+		This config should be installed at http://www.dlese.org/downloads/joai/product_release_config.xml.
+		To add a new release, copy a <release> element and replace the information
+		as appropriate. The current release is always the first one.
+	-->
+	<package id="joai">
+		<name>jOAI Software</name>
+		<description>
+			<![CDATA[ 
+			jOAI is a Java-based open source <a href="http://www.openarchives.org/" target="_blank">Open Archives Initiative</a> 
+			data provider and harvester tool that runs in a 
+			servlet container such as <a href="http://tomcat.apache.org/" target="_blank">Apache Tomcat</a>. 
+			
+			<br/><br/>
+			
+			<b>The jOAI data provider</b> allows XML files from a file system to be
+			exposed as items in an OAI data repository and made available for harvesting by others using the OAI-PMH. After 
+			pointing the software to one or more file directories, the software monitors the XML files inside, adding, 
+			updating or deleting them from the OAI repository as files are added, updated or deleted from the directories. 
+			
+			<br/><br/>
+			
+			<b>The jOAI harvester</b> is used to retrieve metadata records
+			from remote OAI data providers and save them to the local file system, one record per file. In addition, 
+			records that have been harvested may be packaged into zip archives that can be downloaded and opened through 
+			the harvester's web-based interface.
+			
+			<br/><br/>
+			
+			This software is developed by Digital Learning Sciences (DLS)
+			at the University Corporation for Atmospheric Research (<a href="http://www.ucar.edu/">http://www.ucar.edu/</a>).
+			]]>
+		</description>
+		<release>
+			<link>
+				<name>Download at GitHub</name>
+				<url>https://github.com/NCAR/joai-project</url>
+			</link>
+		</release>
+	</package>
+</productReleases>

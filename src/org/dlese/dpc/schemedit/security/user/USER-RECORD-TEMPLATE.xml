@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<record xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:noNamespaceSchemaLocation="http://localhost/metadata-frameworks/ncs_user/ncsUserFramework.xsd">
+	<username />
+	<isAdminUser />
+	<general>
+		<firstname />
+		<lastname />
+		<email />
+		<department />
+		<institution />
+	</general>
+	<preferences />
+	<roles />
+</record>				
