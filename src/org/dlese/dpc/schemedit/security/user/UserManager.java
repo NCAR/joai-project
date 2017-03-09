@@ -40,7 +40,6 @@ import org.dlese.dpc.schemedit.security.access.Roles;
  *  UI, and authentication
  *
  * @author    Jonathan Ostwald
- * @see       User.
  */
 public class UserManager {
 
