@@ -1,0 +1,54 @@
+<component name="libraryTable">
+  <library name="lib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/antlr.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/lucene-snowball-3.0.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/commons-logging.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/commons-lang-2.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/DleseGui.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/commons-dbcp.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/jstl-pre1_0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/commons-fileupload.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/jaxen-full.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/lucene-instantiated-3.0.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/request.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/axis-1.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/json.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/standard-pre1_0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/htmlparser-1.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/xercesImpl.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/commons-validator.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/LatteLibUtil-3.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/commons-resources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/ucarAuthClient.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/vocab.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/jstl.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/mail.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/saxpath.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/commons-collections-3.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/ndr-keygen.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/relaxngDatatype.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/PDFBox-0.6.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/commons-beanutils.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/commons-digester.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/jdom-b7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/jettison-1.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/xsdlib.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/struts-el.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/ncore_client_admin-1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/datetime.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/lucene-core-3.0.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/commons-pool.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/struts.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/saxon9he-xslt-2-support.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/standard.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/taglibs-application.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/response.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/jakarta-oro.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/dom4j.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/junit.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
