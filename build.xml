@@ -168,25 +168,6 @@
     </path>
 
 
-    <!-- ==================== Update Java Copyright Headers ===========================   -->
-
-    <path id="ant.task.classpath">
-        <pathelement location="/Users/jweather/devel/projects/subversion_projects/ccs_project_tree_export/ccs_project_tree/tags/v2.0.20/ccs-project/build_lib/nsdl_ant_goodies-1.0.jar" />
-    </path>
-
-    <taskdef name="replace_headers"
-             classname="org.nsdl.util.ant.HeaderReplacementTask"
-             classpathref="ant.task.classpath" />
-
-    <target name="replace-headers">
-        <replace_headers file="/Users/jweather/ucar_src_code_header.txt" before="package">
-            <fileset
-                    dir="/Users/jweather/devel/projects/dls-repository-stack/rhm-webapp/src/edu/ucar/dls"
-                    includes="**/*.java" />
-        </replace_headers>
-    </target>
-
-
     <!-- ==================== All Target ======================================
 
       The "all" target is a shortcut for running the "clean" target followed
