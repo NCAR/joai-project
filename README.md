@@ -3,8 +3,8 @@
 The jOAI Java web application implements the Open Archives Initiative Protocol for Metadata Harvesting (OAI-PMH), version 2.0,
 and includes a data provider and harvester.
 
-You can view the jOAI web application at
-- http://uc.dls.ucar.edu/joai/
+View the jOAI web application and documentation at
+- https://uc.dls.ucar.edu/joai/
 
 ## Getting Started
 
