@@ -1,10 +1,10 @@
 Release notes and version documentation for the 
-jOAI software version @VERSION@
+jOAI web application software version @VERSION@
 -----------------------------------------------------------------------------------
 
-v3.2
+v3.2 (Released to GitHub March 21, 2017)
 
--Updated to run under Tomcat 7 and 8, and Java 8
+-Updated to run under Tomcat 6, 7, or 8, and Java 8
 -Released under Apache 2.0 License (previous versions were GPL license)
 -Fixed issue where links on the search page were not displayed for URLs beginning with https
 -Updated support email found in various files

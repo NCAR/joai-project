@@ -1,8 +1,4 @@
-jOAI is a Java-based open source Open Archives Initiative 
-data provider and harvester tool that runs in a servlet 
-container such as Apache Tomcat. 
-
-Installation instructions for the jOAI software v@VERSION@.
+Installation instructions for the jOAI web application software v@VERSION@.
 
 If you are upgrading from a previous version, see notes on 
 upgrading below.
