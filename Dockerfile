@@ -1,7 +1,7 @@
 FROM frekele/ant:1.10-jdk8 as builder
 
 WORKDIR /usr/local
-RUN curl 'http://apache.mirror.digitalpacific.com.au/tomcat/tomcat-8/v8.5.37/bin/apache-tomcat-8.5.37.tar.gz' | tar xz
+RUN curl --location 'http://apache.mirror.digitalpacific.com.au/tomcat/tomcat-9/v9.0.14/bin/apache-tomcat-9.0.14.tar.gz' | tar xz
 RUN cd apache-tomcat* && echo "catalina.home=$(pwd)" > ~/build.properties
 
 COPY . /tmp/joai-project
@@ -13,7 +13,7 @@ RUN unzip /tmp/joai-project/dist/oai.war
 
 
 # stage 2
-FROM tomcat:8-jre8-alpine
+FROM tomcat:9-jre8-alpine
 LABEL author="Tom Saleeba"
 
 WORKDIR /usr/local/tomcat/webapps
