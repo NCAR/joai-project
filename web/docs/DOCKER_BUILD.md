@@ -56,7 +56,7 @@ services:
     image: ncar/joai-project:3.2
     restart: unless-stopped
     volumes:
-      - joai_config:/joai/conifg
+      - joai_config:/joai/config
       - joai_data:/joai/data
     ports:
       - 38080:8080
