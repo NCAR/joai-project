@@ -1,6 +1,6 @@
 Instructions for building the jOAI web application software v@VERSION@ from source.
 
-Quick instructions: 
+Quick instructions:
 --------------------------------------------
 
 This software may be built easily using Ant. If you are already using Ant
@@ -21,7 +21,7 @@ https://github.com/NCAR/joai-project
 
 
 To build the jOAI software from source you must have the following:
-  
+
 1. joai-project - the jOAI software source code directory
 3. Tomcat (available at http://tomcat.apache.org/)
 4. Ant (available at http://ant.apache.org/)
@@ -31,7 +31,7 @@ To build the jOAI software from source you must have the following:
 Build instructions:
 
 These instructions assume you will be working in a UNIX command-line environment.
-The software can also be built on Windows but specific instructions are not 
+The software can also be built on Windows but specific instructions are not
 provided here.
 
 1. Obtain the joai-project code directory (see above)
@@ -42,18 +42,19 @@ provided here.
 For example:
  # cd ~/my_build_area
  # ls joai-project
-	  
+
 4. cd into the joai-project directory.
   # cd joai-project
 
-5. Create a file named build.properties or joai.properties to your build directory
-(alternatively this can be placed in your home directory).
+5. Create a file named build.properties or joai.properties in your build directory,
+that is the parent directory of the joai-project directory. Alternatively this file
+can be placed in your home directory.
 
-6. Edit the build.properties file and set the poperty catalina.home to
+6. Edit the build.properties file and set the property catalina.home to
 point to your intallation of Tomcat, for example:
 catalina.home = /home/username/dev/apache-tomcat-8
 
-See the build.xml file located in joai-project for information on the 
+See the build.xml file located in joai-project for information on the
 properties settings.
 
 7. Execute the Ant deploy command.

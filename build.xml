@@ -273,6 +273,7 @@
         <mkdir    dir="${build.home}/WEB-INF/classes"/>
         <javac srcdir="src"
                destdir="${build.home}/WEB-INF/classes"
+               encoding="UTF-8"
                debug="${compile.debug}"
                deprecation="${compile.deprecation}"
                optimize="${compile.optimize}"

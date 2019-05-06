@@ -8,6 +8,7 @@ and includes a data provider and harvester.
 Please see the following documentation for jOAI:
 - [Installation instructions](web/docs/INSTALL.txt) - Install the pre-compiled binary WAR file to Tomcat ([get the latest release](https://github.com/NCAR/joai-project/releases/latest))
 - [Build instructions](web/docs/BUILD_INSTRUCTIONS.txt) - Build the web application from source
+- [Docker build instructions](web/docs/DOCKER_BUILD.md) - Build the web application from source and bundle in a docker image
 - [Changes](web/docs/CHANGES.txt) - View changes in the latest software release
 - [Data provider documentation](https://uc.dls.ucar.edu/joai/docs/provider.jsp) - Set up and configure the data provider
 - [Harvester documentation](https://uc.dls.ucar.edu/joai/docs/harvester.jsp) - Set up and configure the harvester tool
