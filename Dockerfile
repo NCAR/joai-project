@@ -1,7 +1,7 @@
 FROM frekele/ant:1.10-jdk8 as builder
 
 WORKDIR /usr/local
-RUN curl --location 'https://archive.apache.org/dist/tomcat/tomcat-9/v9.0.14/bin/apache-tomcat-9.0.14.tar.gz' | tar xz
+RUN curl --location 'https://archive.apache.org/dist/tomcat/tomcat-9/v9.0.58/bin/apache-tomcat-9.0.58.tar.gz' | tar xz
 RUN cd apache-tomcat* && echo "catalina.home=$(pwd)" > ~/build.properties
 
 COPY . /tmp/joai-project
