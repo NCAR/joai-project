@@ -1,22 +1,24 @@
 # jOAI Software
 
-The jOAI Java web application implements the [Open Archives Initiative Protocol for Metadata Harvesting (OAI-PMH)](http://openarchives.org/), version 2.0,
+jOAI is a Java web application that implements the [Open Archives Initiative Protocol for Metadata Harvesting (OAI-PMH)](http://openarchives.org/), version 2.0,
 and includes a data provider and harvester.
 
 ## Getting Started
 
 Please see the following documentation for jOAI:
-- [Installation instructions](web/docs/INSTALL.txt) - Install the pre-compiled binary WAR file to Tomcat ([get the latest release](https://github.com/NCAR/joai-project/releases/latest))
-- [Build instructions](web/docs/BUILD_INSTRUCTIONS.txt) - Build the web application from source
+- [Installation instructions](web/docs/INSTALL.md) - Install the pre-compiled binary WAR file to Tomcat ([get the latest release](https://github.com/NCAR/joai-project/releases/latest))
+- [Build instructions](web/docs/BUILD_INSTRUCTIONS.md) - Build the web application from source
 - [Docker build instructions](web/docs/DOCKER_BUILD.md) - Build the web application from source and bundle in a docker image
-- [Changes](web/docs/CHANGES.txt) - View changes in the latest software release
-- [Data provider documentation](https://uc.dls.ucar.edu/joai/docs/provider.jsp) - Set up and configure the data provider
-- [Harvester documentation](https://uc.dls.ucar.edu/joai/docs/harvester.jsp) - Set up and configure the harvester tool
+- [Changes](web/docs/CHANGES.md) - View changes in the latest software release
+- Data provider and Harvester documentation - Install and start jOAI, open the web application in your browser and go to the
+  Data Provider and Harvester documentation pages to set up and begin using jOAI
 
-## History
+## About
 
-The jOAI code was previously managed under two separate modules at SourceForge 
-(joai-project and dlese-tools-project branch joai_v3_1_1_branch at 
-https://sourceforge.net/projects/dlsciences/).
-In March 2017, the jOAI code project was moved to GitHub.
+jOAI was developed by Digital Learning Sciences</a> (DLS) at the
+<a href="http://www.ucar.edu/">University Corporation for Atmospheric Research</a> (UCAR)
+to support the Digital Library for Earth System Education (DLESE)
+and is maintained as an open source project used by a number of organizations.
+Support was provided by the <a href="http://nsf.gov/">National Science Foundation (NSF)</a> as part of the
+<a href="https://www.nsf.gov/geo/adgeo/geoedu/cov2003/DLESE_data.jsp">DLESE Program</a> and other grants.
 

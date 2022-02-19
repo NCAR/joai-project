@@ -25,7 +25,7 @@
 <p>
   <a href="odlsearch.do">ODL search specification</a>
 <p>
-   <a href="INSTALL.txt">Installing jOAI</a>
+   <a href="INSTALL.md">Installing jOAI</a>
 <p>
    <a href="configuring_joai.jsp">Configuring jOAI</a>
 <p>

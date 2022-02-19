@@ -3,3 +3,4 @@ dist
 war-distribution
 build.properties
 
+/.idea/

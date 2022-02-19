@@ -24,7 +24,7 @@
 
 <a name="top"></a><h1>${title}</h1>
 
-<p>This page describes options for configuring and customizing your jOAI  software.  These instructions assume the software has already been installed according to the <a href='<c:url value="/docs/INSTALL.txt"/>'>installation instructions</a>.</p>
+<p>This page describes options for configuring and customizing your jOAI  software.  These instructions assume the software has already been installed according to the <a href='<c:url value="/docs/INSTALL.md"/>'>installation instructions</a>.</p>
 <p>&nbsp;</p>
 <hr align="JUSTIFY">
 <h3 align="justify"><a name="searchClient"></a>Create a custom search page </h3>
@@ -149,7 +149,7 @@ determined by examining the URL that was requested by the client. Note that when
 <p>&nbsp;</p>
 <hr>
 <h3>Source Code</h3>
-<p>See the <a href="<c:url value='/docs/BUILD_INSTRUCTIONS.txt'/>">build instructions</a> for detailed infromation about obtaining the source code and building jOAI using Ant.</p>
+<p>See the <a href="<c:url value='/docs/build_instructions.md'/>">build instructions</a> for detailed infromation about obtaining the source code and building jOAI using Ant.</p>
 <h3>&nbsp;</h3>
 <p>&nbsp;</p>
 <c:import url="../bottom.jsp"/>

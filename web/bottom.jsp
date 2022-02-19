@@ -16,7 +16,6 @@
     <map name="footerMap" id="footerMap">
       <area shape="rect" coords="130,1,220,42" href="http://www.ucar.edu" target="_blank" alt="${ucarToolTip}" title="${ucarToolTip}" />
       <area shape="rect" coords="219,1,268,46" href="http://www.nsf.gov/" target="_blank" alt="${nsfToolTip}" title="${nsfToolTip}" />
-      <area shape="rect" coords="267,-1,388,42" href="http://www.dlese.org" target="_blank" alt="${dleseToolTip}" title="${dleseToolTip}" />
     </map>
 </div>
 <br/>

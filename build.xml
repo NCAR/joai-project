@@ -17,7 +17,7 @@
 
      Required ant properties that must be defined:
 
-     catalina.home  	# The base direcory of your development Tomcat 7 or 8 installation
+     catalina.home  	# The base directory of your development Tomcat 7 or 8 installation
 
 
      Optional ant properties that may be defined:
@@ -32,7 +32,7 @@
 
      catalina.home = K:/username/dev/tomcat
 
-     On UNIX plattforms your build.properties file might look like:
+     On UNIX platforms your build.properties file might look like:
 
      catalina.home = /home/username/dev/tomcat
 
@@ -87,7 +87,7 @@
     <property file="${user.home}/build.properties"/>
 
 
-    <property name="app.version" value="3.2"/>
+    <property name="app.version" value="3.3"/>
     <property name="app.name" value="oai"/>
     <property name="oai.context.name" value="oai"/>
     <property name="deploy.context.name" value="${oai.context.name}"/>
@@ -378,6 +378,7 @@
                 <include name="**/*.jsp"/>
                 <include name="**/*.html"/>
                 <include name="**/*.txt"/>
+                <include name="**/*.md"/>
                 <include name="**/*.xml"/>
                 <include name="**/*.xsl"/>
             </fileset>
@@ -430,6 +431,7 @@
                 <include name="**/*.jsp"/>
                 <include name="**/*.html"/>
                 <include name="**/*.txt"/>
+                <include name="**/*.md"/>
             </fileset>
             <!-- Remove the BLANK tag in the jsps (fixes bug in JEdit if XML
               declaration is the first thing in the file -->
@@ -454,6 +456,7 @@
         <copy todir="${dist.home}">
             <fileset dir="web/docs">
                 <include name="**/*.txt"/>
+                <include name="**/*.md"/>
             </fileset>
             <filterset>
                 <filter token="VERSION" value="${app.version}"/>
@@ -475,7 +478,7 @@
         <!-- Zip the binary distribution -->
         <property name="zip.name" value="joai_v${app.version}.zip"/>
         <zip destfile="${basedir}/${zip.name}">
-            <zipfileset dir="${dist.home}" excludes="**/BUILD_INSTRUCTIONS.txt" prefix="joai_v${app.version}"/>
+            <zipfileset dir="${dist.home}" excludes="**/BUILD_INSTRUCTIONS.md" prefix="joai_v${app.version}"/>
         </zip>
         <move file="${basedir}/${zip.name}" tofile="${dist.home}/${zip.name}"/>
 
@@ -486,7 +489,7 @@
         <property name="src.zip.name" value="joai_v${app.version}_source.zip"/>
         <zip destfile="${basedir}/../${src.zip.name}">
             <zipfileset dir="${basedir}/../joai-project"  excludes="${dist.home}/**" prefix="joai_v${app.version}_source/joai-project" />
-            <zipfileset dir="${dist.home}" includes="**/BUILD_INSTRUCTIONS.txt" prefix="joai_v${app.version}_source"/>
+            <zipfileset dir="${dist.home}" includes="**/BUILD_INSTRUCTIONS.md" prefix="joai_v${app.version}_source"/>
         </zip>
         <move file="${basedir}/../${src.zip.name}" tofile="${dist.home}/${src.zip.name}"/>
 
@@ -590,6 +593,7 @@
                 <include name="**/*.jsp"/>
                 <include name="**/*.html"/>
                 <include name="**/*.txt"/>
+                <include name="**/*.md"/>
                 <include name="**/*.xml"/>
             </fileset>
             <!-- Remove the BLANK tag in the jsps (fixes bug in JEdit if XML
@@ -607,6 +611,7 @@
                 <exclude name="**/*.jsp"/>
                 <exclude name="**/*.html"/>
                 <exclude name="**/*.txt"/>
+                <exclude name="**/*.md"/>
             </fileset>
         </copy>
 

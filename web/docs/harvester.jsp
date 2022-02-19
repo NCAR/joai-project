@@ -120,7 +120,7 @@
 
 <p>
 
-  See <a href="INSTALL.txt">INSTALL.txt</a> for installation instructions. If reading this page, most likely this step has  been completed.
+  See <a href="INSTALL.md">INSTALL.md</a> for installation instructions. If reading this page, most likely this step has  been completed.
 
 <p>
 
@@ -180,15 +180,16 @@
 
 <h3 align="justify">Harvest test files</h3>
 
-<p>Conduct a test harvest  by completing the harvester setup section above but use the following  information:</p>
+<p>Conduct a test harvest by completing the harvester setup section above using one of the repositories
+  <a href="http://www.openarchives.org/Register/BrowseSites">registered data providers at openarchives.org</a></p>
 
 <ul type="disc">
 
-  <li>Repository name: DLESE</li>
+  <li>Repository name: <i>name of repository</i></li>
 
-  <li>Repository base URL: http://dlese.org/oai/provider</li>
+  <li>Repository base URL: <i>BASE_URL</i></li>
 
-  <li>Metadata format: adn</li>
+  <li>Metadata format: <i>oai_dc</i></li>
 
 </ul>
 

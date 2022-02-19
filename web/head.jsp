@@ -41,7 +41,7 @@ var subMenu1 = new Array ()
      subMenu1[${menNum}][1] = new Array ("Harvester Documentation", '<c:url value="/docs/harvester.jsp"/>',"_top")
      subMenu1[${menNum}][2] = new Array ("Frequently Asked Questions (FAQ)", '<c:url value="/docs/faq.jsp"/>',"_top")	 
      subMenu1[${menNum}][3] = new Array ("ODL Search Specification", '<c:url value="/docs/odlsearch.do"/>',"_top")
-     subMenu1[${menNum}][4] = new Array ("Installing jOAI", '<c:url value="/docs/INSTALL.txt"/>',"_top")	 
+     subMenu1[${menNum}][4] = new Array ("Installing jOAI", '<c:url value="/docs/INSTALL.md"/>',"_top")
      subMenu1[${menNum}][5] = new Array ("Configuring jOAI", '<c:url value="/docs/configuring_joai.jsp"/>',"_top")
      subMenu1[${menNum}][6] = new Array ("About jOAI", '<c:url value="/docs/about.jsp"/>',"_top")
    <c:set var="menNum" value="${menNum + 1}"/>  

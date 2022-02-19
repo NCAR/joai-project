@@ -32,12 +32,16 @@
 </p>
 
 <p>
-    The jOAI software was developed by Digital Learning Sciences</a> (DLS) at the
+    jOAI was developed by Digital Learning Sciences</a> (DLS) at the
     <a href="http://www.ucar.edu/">University Corporation for Atmospheric Research</a> (UCAR)
-    to support the <a href="http://www.dlese.org/">Digital Library for Earth System Education (DLESE)</a>
-    and has been maintained as an open source project used by a number of organizations.
-    Support has been provided by the <a href="http://nsf.gov/">National Science Foundation (NSF)</a> as part of the
-    DLESE Program and other grants.
+    to support the Digital Library for Earth System Education (DLESE)
+    and is maintained as an open source project used by a number of organizations.
+    Support was provided by the <a href="http://nsf.gov/">National Science Foundation (NSF)</a> as part of the
+    <a href="https://www.nsf.gov/geo/adgeo/geoedu/cov2003/DLESE_data.jsp">DLESE Program</a> and other grants.
+</p>
+
+<p>
+    The DLESE website and repository have been retired. You can <a href="https://aspace.archives.ucar.edu/repositories/2/resources/51">read about DLESE at the NCAR Arvhives</a>.
 </p>
 
 
@@ -63,7 +67,7 @@
 
 <p>
 
-    Read the <a href="<c:url value='/docs/CHANGES.txt'/>" title="Read release notes and change information">release
+    Read the <a href="<c:url value='/docs/CHANGES.md'/>" title="Read release notes and change information">release
     notes and changes</a>.</p>
 
 

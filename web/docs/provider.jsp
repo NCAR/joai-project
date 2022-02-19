@@ -56,7 +56,7 @@
 <h3>Data provider setup</h3>
 <p>There are five steps necessary to make metadata files available through the jOAI data provider: </p>
 <p>1. Install the jOAI software on a system in a servlet container such as <a href="http://tomcat.apache.org/">Apache Tomcat</a>. </p>
-<p>See <a href="INSTALL.txt">INSTALL.txt</a> for installation instructions. If reading this page, most likely this step has been completed. </p>
+<p>See <a href="INSTALL.md">INSTALL.md</a> for installation instructions. If reading this page, most likely this step has been completed. </p>
 <p>2. Complete the <a href="<c:url value='/admin/data-provider-info.do'/>">Repository Information</a> by clicking 'Edit repository info' in the Repository Information and Administration page and then:</p>
 <ul>
   <li>Enter a repository name (<em>required</em>) </li>

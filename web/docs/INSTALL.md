@@ -1,4 +1,6 @@
-Installation instructions for the jOAI web application software v@VERSION@.
+# Installing jOAI
+
+Installation instructions for the jOAI web application software.
 
 If you are upgrading from a previous version, see notes on 
 upgrading below.
@@ -49,13 +51,13 @@ enabling access control, see the page 'Configuring jOAI' in your installation,
 e.g.: http://localhost:8080/oai/docs/configuring_joai.jsp
 
 
-============ Building from Source Code ===============
+	============ Building from Source Code ===============
 
-See the file BUILD_INSTRUCTIONS.txt for information about obtaining 
+See the file build_instructions.md for information about obtaining
 the source code and building jOAI using ant.
 
 
-============ Upgrading from a previous version ===============
+	============ Upgrading from a previous version ===============
 
 If you are upgrading from v3.0.2 or earlier versions of the software,
 please note the following:
@@ -72,7 +74,7 @@ reinstall it later by placing it back into webapps if needed.
 Tomcat (or other application server) at any given time.
 
 
-============ Tips and notes ============
+	============ Tips and notes ============
 
 1. Only one instance of the software should be installed and running in a single
 Tomcat (or other application server) at any given time.
@@ -91,7 +93,9 @@ Tomcat (or other application server) at any given time.
 
 3. If Tomcat does not unpack the oai.war archive automatically, you may do so manually. 
 	
-	On Linux: 1. Create an 'oai' directory in the 'webapps' directory. 
-	2. cd into 'oai.' 3. Enter the command 'jar xvf ../oai.war.'
+	On Linux: 
+	1. Create an 'oai' directory in the 'webapps' directory.
+	2. cd into 'oai.' 
+	3. Enter the command 'jar xvf ../oai.war.'
 	
 

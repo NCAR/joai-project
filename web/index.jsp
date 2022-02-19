@@ -21,7 +21,7 @@
 
 <h1>Overview</h1>
 
-<p>The jOAI Java web application implements the Open Archives Initiative Protocol for Metadata Harvesting
+<p>jOAI is a Java web application that implements the Open Archives Initiative Protocol for Metadata Harvesting
     (OAI-PMH), version 2.0. The protocol establishes methods for sharing individual metadata files that are XML
     documents. The software contains a data provider that makes XML metadata files available to others and a data
     harvester that can get XML metadata files from others.</p>
@@ -70,7 +70,7 @@
 
 </ul>
 
-Version @VERSION@ of the jOAI software has been tested with Java 8 and Tomcat 7 and 8.
+Version @VERSION@ of the jOAI software runs under Java 8 (or higher) and Tomcat 7, 8, and 9.
 
 <h3>Downloading jOAI</h3>
 
@@ -79,7 +79,7 @@ Version @VERSION@ of the jOAI software has been tested with Java 8 and Tomcat 7 
 
 <h3>Installing jOAI</h3>
 
-<p>See the <a href='<c:url value="/docs/INSTALL.txt"/>'>installation instructions</a> for information about installing
+<p>See the <a href='<c:url value="/docs/INSTALL.md"/>'>installation instructions</a> for information about installing
     jOAI. </p>
 
 <h3>Configuring jOAI</h3>
@@ -93,8 +93,10 @@ Version @VERSION@ of the jOAI software has been tested with Java 8 and Tomcat 7 
 
 <h3>Source Code</h3>
 
-<p>See the <a href="<c:url value='/docs/BUILD_INSTRUCTIONS.txt'/>">build instructions</a> for detailed infromation about
+<p>See the <a href="<c:url value='/docs/BUILD_INSTRUCTIONS.md'/>">build instructions</a> for detailed information about
     obtaining the source code and building jOAI using Ant.</p>
+
+<p>The <a href="<c:url value='/docs/javadoc/index.html'/>">Javadoc</a> pages provide documentation for the jOAI Java code.</p>
 
 <p>See also the <a href='<c:url value="/docs/"/>'>jOAI documentation pages</a> for information about using the software.
 </p>
