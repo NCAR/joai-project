@@ -3,7 +3,6 @@
 
 Release notes and version documentation for the 
 jOAI web application software version @VERSION@
------------------------------------------------------------------------------------
 
 v3.3 (Released to GitHub February 19, 2022)
 
