@@ -55,7 +55,7 @@ e.g.: http://localhost:8080/oai/docs/configuring_joai.jsp
 
 ### Building from Source Code
 
-(Optional) Read the [Build instructions](web/docs/BUILD_INSTRUCTIONS.md) for information about obtaining
+(Optional) Read the [Build instructions](BUILD_INSTRUCTIONS.md) for information about obtaining
 the source code and building jOAI using ant.
 
 
