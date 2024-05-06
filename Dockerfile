@@ -26,5 +26,8 @@ RUN \
   ln -s /joai/config/harvester /usr/local/tomcat/webapps/ROOT/WEB-INF/harvester_settings_and_data && \
   ln -s /joai/config/repository /usr/local/tomcat/webapps/ROOT/WEB-INF/repository_settings_and_data
 
-VOLUME /joai/config  # just the config
-VOLUME /joai/data    # the harvested/provided records
+# just the config
+VOLUME /joai/config
+
+# the harvested/provided records
+VOLUME /joai/data
