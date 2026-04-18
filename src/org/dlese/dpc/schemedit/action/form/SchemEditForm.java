@@ -17,6 +17,7 @@
 */
 package org.dlese.dpc.schemedit.action.form;
 
+import org.dlese.dpc.schemedit.Record;
 import org.dlese.dpc.schemedit.*;
 import org.dlese.dpc.schemedit.input.*;
 import org.dlese.dpc.schemedit.autoform.RendererHelper;
