@@ -15,7 +15,6 @@
 <c:set var="rm" value="${applicationScope.repositoryManager}"/>
 <html:html>
   <title>${title}</title>
-    <html:base />
 
 
 	<%-- Include style/menu templates --%>
