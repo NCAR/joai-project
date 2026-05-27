@@ -85,15 +85,26 @@ public final class GeneralServletTools {
 	public static String getContextUrl(HttpServletRequest req) {
 		if (req == null)
 			return null;
+		String scheme = req.getScheme();
+		String forwardedProto = req.getHeader("x-forwarded-proto");
+		if (forwardedProto != null) {
+			scheme = forwardedProto;
+		}
+		String serverPort = String.valueOf(req.getServerPort());
+		String forwardedPort = req.getHeader("x-forwarded-port");
+		if (forwardedPort != null) {
+			serverPort = forwardedPort;
+		}
+		String portPart = ":" + serverPort;
+		if ("80".equals(serverPort) & scheme.equals("http") || 
+			"443".equals(serverPort) && scheme.equals("https")) {
+			portPart = "";
+		}
 
-		String port = "";
-		if (req.getServerPort() != 80)
-			port = ":" + req.getServerPort();
-
-		String contextURL = (req.getScheme()
+		String contextURL = (scheme
 				 + "://"
 				 + req.getServerName()
-				 + port
+				 + portPart
 				 + req.getContextPath()).trim();
 		return contextURL;
 	}
