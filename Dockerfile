@@ -1,7 +1,7 @@
 FROM eclipse-temurin:21-jdk as builder
 WORKDIR /usr/local
 RUN apt-get update && apt-get install -y ant unzip
-RUN curl --location 'https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.117/bin/apache-tomcat-9.0.117.tar.gz' | tar xz
+RUN curl --location 'https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.120/bin/apache-tomcat-9.0.120.tar.gz' | tar xz
 RUN cd apache-tomcat* && echo "catalina.home=$(pwd)" > ~/build.properties
 
 COPY . /tmp/joai-project
