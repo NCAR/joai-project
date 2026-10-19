@@ -13,7 +13,7 @@ RUN unzip /tmp/joai-project/dist/oai.war
 
 
 # stage 2
-FROM tomcat:9.0.123-jdk21-corretto
+FROM tomcat:9.0.123-jdk21-temurin-noble
 LABEL author="Tom Saleeba"
 
 WORKDIR /usr/local/tomcat/webapps
